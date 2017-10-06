@@ -111,6 +111,7 @@ function doPredict(value) {
                 }
 
                 tagCount = tagArray.length;
+
             }
 
             var columnCount = tagCount / 10;
@@ -127,22 +128,28 @@ function doPredict(value) {
 
             $('#concepts').html(conceptNames);
 
+
             document.getElementById("add-image-button").style.visibility = "visible";
+            b();
             console.log(arrOfFoods)
+
         },
         function(err) {
             console.log(err);
         }
     );
+    
 }
 
 var nextCount = 0;
+
+function b(){
 
 
 
 $(document).ready(function() {
     // console.log(arrOfFoods);
-    $("#first-imgs").on("click", function() {
+    // $("#first-imgs").on("click", function() {
         console.log("button clicked");
         var food1 = arrOfFoods[0];
         var food2 = arrOfFoods[1];
@@ -185,7 +192,7 @@ $(document).ready(function() {
                 $("#foods").append(recipeImg);
             }
         });
-    });
+    // });
     $("#next-imgs").on("click", function() {
         var food1 = arrOfFoods[0];
         var food2 = arrOfFoods[1];
@@ -234,6 +241,7 @@ $(document).ready(function() {
 
 
 });
+}
 
 /*
   Purpose: Return a back-end model id based on current user selection

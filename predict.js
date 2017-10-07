@@ -7,6 +7,13 @@
 
 
 
+ 
+
+
+
+// $("#input-div").css({"display" : "initial"});
+
+
 function predict_click(value, source) {
     // first grab current index
     var index = document.getElementById("hidden-counter").value;
@@ -43,6 +50,9 @@ function predict_click(value, source) {
         }
     }
 }
+
+
+// $("predict-url").on("click", )
 
 /*
   Purpose: Does a v2 prediction based on user input
@@ -143,14 +153,27 @@ function doPredict(value) {
 
 var nextCount = 0;
 
+$(document).ready(function() {
+
+  // $("body").css("background-color", "black");
+  
+
 function b(){
 
 
 
-$(document).ready(function() {
+
+  // alert("hello");
+  // // add slide images
+  // // $("body").children().hide();
+  // console.log("changing color")
+  // $(".container").css("background-color", "black");
+
+  // console.log("changed color")
+
     // console.log(arrOfFoods);
     // $("#first-imgs").on("click", function() {
-        console.log("button clicked");
+        // console.log("button clicked");
         var food1 = arrOfFoods[0];
         var food2 = arrOfFoods[1];
         var food3 = arrOfFoods[2];
@@ -240,9 +263,9 @@ $(document).ready(function() {
     });
 
 
-});
-}
 
+}
+});
 /*
   Purpose: Return a back-end model id based on current user selection
   Returns:

@@ -5,20 +5,26 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Clarifai JavaScript Stater</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="predict.js"></script>
-    <script type="text/javascript" src="myApiKey"></script>
+    <!-- <script type="text/javascript" src="myApiKey"></script> -->
     <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-    <script type="text/javascript" src="food.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles.css" type="text/css">
+    <script type="text/javascript" src="food.js"></script>
+    <script type="text/javascript" src="predict.js"></script>
 </head>
 
-<body>
-    <div id = "input-div">
-    <div id="Title" style="font-size:48px; font-face:Arial; margin-bottom:20px;"><img src="Clarifai_Logo.png" id="logo" />&nbsp;Model Tester!</div>
-    <div id="Model_Title" style="font-size:16px; margin-bottom:5px">Model</div>
-    <input type="hidden" id="hidden-counter" name="hidden-counter" value="1" />
-    <div style="float:left">
-        <button id="predict-url" onclick="
+<body class="container">
+    <div class="row">
+        <div id="main-div" class="col-lg-4 offset-lg-4 text-center">
+            <div class="w3-content w3-section">
+                <img class="mySlides w3-animate-top" src="assets/images/ham-wrap.jpg">
+                <img class="mySlides w3-animate-bottom" src="assets/images/healthy-ingredients.jpg">
+                <img class="mySlides w3-animate-top" src="assets/images/healthy-vegetables.jpg">
+                <img class="mySlides w3-animate-bottom" src="assets/images/steak.jpg">
+            </div>
+            <input type="hidden" id="hidden-counter" name="hidden-counter" value="1" />
+            <div style="float:left">
+                <button id="predict-url" onclick="
       if(imgurl.value == '') { 
         alert('Please enter an image URL!'); 
         return;
@@ -30,10 +36,10 @@
       }
     
       predict_click($('#imgurl').val(), 'url');" style="width:112px">Predict a URL!</button>
-        <input type="text" id="imgurl" placeholder="Image URL" size="80" />
-        <br/>
-        <br/>
-        <button onclick="
+                <input type="text" id="imgurl" placeholder="Image URL" size="80" />
+                <br/>
+                <br/>
+                <button onclick="
       if(filename.value == '') { 
         alert('Please browse for a file!'); 
         return;
@@ -44,21 +50,22 @@
         return;
       }
       predict_click($('#filename').val(), 'file');">Predict a local file!</button>
-        <input type="file" id="filename" placeholder="Filename" size="80" />
-    </div>
-    <div id="predictions">
-        <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
-            <img id="img_preview1" src="" width="400" />
-            <br/>
-            <span id="add-image-button" style="visibility:hidden"><button onClick="addImageToApp(1)">Add image to application</button></span>
+                <input type="file" id="filename" placeholder="Filename" size="80" />
+            </div>
+            <div id="predictions">
+                <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
+                    <img id="img_preview1" src="" width="400" />
+                    <br/>
+                    <span id="add-image-button" style="visibility:hidden"><button onClick="addImageToApp(1)">Add image to application</button></span>
+                </div>
+                <div id="concepts" class="conceptBox">
+                </div>
+            </div>
+            <button id="first-imgs">first images</button>
+            <button id="next-imgs">next images</button>
+            <div id="foods"></div>
         </div>
-        <div id="concepts" class="conceptBox">
-        </div>
     </div>
-    <button id="first-imgs">first images</button>
-    <button id="next-imgs">next images</button>
-    <div id="foods"></div>
-  </div>
 </body>
 
 </html>

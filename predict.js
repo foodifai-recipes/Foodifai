@@ -168,7 +168,7 @@ $(document).ready(function() {
             food3 + "," +
             food4 + "," +
             food5;
-
+// AJAX starts here
         $.ajax({
             url: queryURL,
             method: "GET"

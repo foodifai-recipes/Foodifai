@@ -7,7 +7,7 @@
 
 
 
- 
+
 
 
 
@@ -140,82 +140,24 @@ function doPredict(value) {
 
 
             document.getElementById("add-image-button").style.visibility = "visible";
+            console.log(arrOfFoods);
             b();
-            console.log(arrOfFoods)
-
         },
         function(err) {
             console.log(err);
         }
+
     );
-    
+
 }
 
 var nextCount = 0;
 
 $(document).ready(function() {
 
-  // $("body").css("background-color", "black");
-  
+    $("#banner").hide();
+    // $("#main-div").hide();
 
-function b(){
-
-
-
-
-  // alert("hello");
-  // // add slide images
-  // // $("body").children().hide();
-  // console.log("changing color")
-  // $(".container").css("background-color", "black");
-
-  // console.log("changed color")
-
-    // console.log(arrOfFoods);
-    // $("#first-imgs").on("click", function() {
-        // console.log("button clicked");
-        var food1 = arrOfFoods[0];
-        var food2 = arrOfFoods[1];
-        var food3 = arrOfFoods[2];
-        var food4 = arrOfFoods[3];
-        var food5 = arrOfFoods[4];
-
-        var key = "98f2777f95ab7c5bf03eb8ee11ff1c00";
-
-        var queryURL =
-            "https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=" +
-            key +
-            "&q=" +
-            food1 + "," +
-            food2 + "," +
-            food3 + "," +
-            food4 + "," +
-            food5;
-// AJAX starts here
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).done(function(response) {
-            var jason = JSON.parse(response);
-            console.log(jason);
-            for (var i = 0; i < 5; i++) {
-                // console.log(jason);
-                console.log(jason.recipes[i]);
-                var recipeName = jason.recipes[i].title;
-                console.log(recipeName);
-                var publisher = jason.recipes[i].publisher;
-                console.log("From " + publisher);
-                var recipeLink = jason.recipes[i].source_url;
-                console.log("Link to their website " + recipeLink);
-                var recipeImg = $("<img>");
-                var recipeImgURL = jason.recipes[i].image_url;
-                recipeImg.attr("src", recipeImgURL);
-                recipeImg.css("width", "200px");
-                recipeImg.css("height", "200px");
-                $("#foods").append(recipeImg);
-            }
-        });
-    // });
     $("#next-imgs").on("click", function() {
         var food1 = arrOfFoods[0];
         var food2 = arrOfFoods[1];
@@ -223,49 +165,93 @@ function b(){
         var food4 = arrOfFoods[3];
         var food5 = arrOfFoods[4];
 
-        var key = "98f2777f95ab7c5bf03eb8ee11ff1c00";
+        var app_id = "cbaba7cb";
+        var app_key = "4964ec0ab446a8f304ae7c3dc858cb50"
+        var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + food1 + "," + food2 + "," +
+            food3 + "," + food4 + "," + food5 + "," +
+            "&app_id=" + app_id + "&app_key=" + app_key + "&";
 
-        var queryURL =
-            "https://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=" +
-            key +
-            "&q=" +
-            food1 + "," +
-            food2 + "," +
-            food3 + "," +
-            food4 + "," +
-            food5;
-        // event.preventDefault();
-        nextCount += 5;
         $.ajax({
-            url: queryURL,
-            method: "GET"
+            METHOD: "GET",
+            url: queryURL
+
         }).done(function(response) {
-            var jason = JSON.parse(response);
-            //   if user is unsatisfied with these search results : will click next button
-            //   next counter adds 5 after each new page of results
+            console.log(response);
+            var results = response.hits;
+            nextCount += 5;
             for (var j = nextCount; j < nextCount + 5; j++) {
-                console.log(jason.recipes[j]);
-                var recipeName = jason.recipes[j].title;
-                console.log(recipeName);
-                var publisher = jason.recipes[j].publisher;
-                console.log("From " + publisher);
-                var recipeLink = jason.recipes[j].source_url;
-                console.log("Link to their website " + recipeLink);
-                var recipeImg = $("<img>");
-                var recipeImgURL = jason.recipes[j].image_url;
-                recipeImg.attr("src", recipeImgURL);
-                recipeImg.css("width", "200px");
-                recipeImg.css("height", "200px");
-                $("#foods").append(recipeImg);
+                var foodDiv = $("<div>");
+                foodDiv.attr("id", "container");
+                var p = $("<p>").text(Math.ceil(results[j].recipe.calories) + " Calories");
+                var foodImage = $("<img/>", { src: results[j].recipe.image, "class": "jpg" }),
+                    anchor = $("<a/>", { href: results[j].recipe.shareAs, "target": "_blank" }),
+                    div = $("<div/>", { "class": "img" });
+                div.append(anchor.append(foodImage)).appendTo($("#foods"));
+                foodDiv.append(p);
+                var ingString = results[j].recipe.ingredientLines;
+
+                for (var i = 0; i < ingString.length; i++) {
+                    var ind = ingString[i].indexOf(" ")
+                    var line = ingString[i].substr(ind)
+                    line.toString();
+                    console.log(line)
+                    var x = line.replace(/\b./g, function(m) { return m.toUpperCase(); });
+                    foodDiv.append(x);
+                }
+
+                foodDiv.append("<br>")
+                foodDiv.append(ingString.length + " Ingredients")
+                $("#foods").append(foodDiv);
             }
-            console.log(nextCount);
         });
     });
-
-
-
-}
 });
+
+function b() {
+    var food1 = arrOfFoods[0];
+    var food2 = arrOfFoods[1];
+    var food3 = arrOfFoods[2];
+    var food4 = arrOfFoods[3];
+    var food5 = arrOfFoods[4];
+
+    var app_id = "cbaba7cb";
+    var app_key = "4964ec0ab446a8f304ae7c3dc858cb50"
+    var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + food1 + "," + food2 + "," + food3 + "," + food4 + "," + food5 + "," +
+        "&app_id=" + app_id + "&app_key=" + app_key + "&";
+    $.ajax({
+        METHOD: "GET",
+        url: queryURL
+    }).done(function(response) {
+        console.log(response);
+        var results = response.hits;
+        nextCount = 0;
+        for (var j = nextCount; j < nextCount + 5; j++) {
+            var foodDiv = $("<div>");
+            foodDiv.attr("id", "container");
+            var p = $("<p>").text(Math.ceil(results[j].recipe.calories) + " Calories");
+            var foodImage = $("<img/>", { src: results[j].recipe.image, "class": "jpg" }),
+                anchor = $("<a/>", { href: results[j].recipe.shareAs, "target": "_blank" }),
+                div = $("<div/>", { "class": "img" });
+            div.append(anchor.append(foodImage)).appendTo($("#foods"));
+            foodDiv.append(p);
+            var ingString = results[j].recipe.ingredientLines;
+
+            for (var i = 0; i < ingString.length; i++) {
+                var ind = ingString[i].indexOf(" ")
+                var line = ingString[i].substr(ind)
+                line.toString();
+                console.log(line)
+                var x = line.replace(/\b./g, function(m) { return m.toUpperCase(); });
+                foodDiv.append(x);
+            }
+
+            foodDiv.append("<br>")
+            foodDiv.append(ingString.length + " Ingredients")
+            $("#foods").append(foodDiv);
+        }
+    });
+};
+
 /*
   Purpose: Return a back-end model id based on current user selection
   Returns:

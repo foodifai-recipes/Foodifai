@@ -9,8 +9,6 @@
 
 
 
-
-
 // $("#input-div").css({"display" : "initial"});
 
 
@@ -157,6 +155,12 @@ $(document).ready(function() {
 
     $("#banner").hide();
     // $("#main-div").hide();
+
+$(".btn-read-more").on("click", function(){
+  $("#event").hide();
+
+});
+
 
     $("#next-imgs").on("click", function() {
         var food1 = arrOfFoods[0];

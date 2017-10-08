@@ -1,41 +1,25 @@
-/*
-    Theme Name: Delicious
-    Theme URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-*/
+
+/*bg-color section-padding row*/
+
 
 body {
     font-size: 15px;
-    line-height: 1.52;
+    line-height: 1.5;
     color: #717f86;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    overflow-x: hidden; 
+    overflow-x: hidden;     
+    margin: 0 auto;
 }
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+
 #banner{
-    background: url(../img/banner-bg.jpg) no-repeat center top;
+    /*background: url(../img/banner-bg.jpg) no-repeat center top;*/
     background-size: cover;
     min-height: 630px;
 }
 .bg-color{
-    background-color: RGBA(0, 0, 0, 0.61);
+    /*background-color: RGBA(0, 0, 0, 0.61);*/
     min-height: 630px;
 }
 #banner h2{
@@ -48,49 +32,9 @@ table {
     color: #fcfcfc;
     font-size: 34px;
 }
-.section-padding{
-    padding: 60px 0px;
-}
-.logo-name{
-    font-family: 'Satisfy', sans-serif;
-    font-size: 65px;
-    margin-top: 140px;
-    color: #FFB03B;
-}
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important;
-    margin-left: 50px;
-}
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
+
+
+/*col-md-6 col-sm-6 details-text*/
 .menu-icon
 {
     color: #fff;
@@ -99,14 +43,17 @@ table {
     cursor: pointer;
 }
 
+
+
+
 .header-h {
-    color: #FFB03B;
+    color: black;
     font-size: 46px;
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
 }
 .header-p {
-    color: #9699a6;
+    color: darkslategray;
     font-size: 16px;
 }
 .msg-row {
@@ -116,7 +63,8 @@ table {
     display: table-cell;
     vertical-align: top;
 }
-.bg-13 {background-color: #f04e4e;
+.bg-13 {
+    background-color: #f04e4e;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -272,8 +220,9 @@ table {
     border-radius: 2px;
 }
 #event{
-    background: url('../img/res02.jpg') no-repeat;
+    background: url('../images/steak.jpg') no-repeat;
     background-size: cover;
+    margin:0 auto;
 }
 .left-images img {
     height: 308px;
@@ -282,30 +231,28 @@ table {
 .left-images{
     padding: 0px;
 }
+
 .details-text {
-    border-right: 2px solid #841b2d;
-}
-.details-text {
-    background-color: rgba(14, 4, 4, 0.70);
-    border-right: 2px solid #A87F41;
-    padding: 20px 20px 30px 30px;
-    overflow: auto;
+    background-color: rgb(14, 4, 4);
+  /*  border-right: 2px solid #A87F41;*/
+    padding: 18px;
+    height:19em;
+    overflow: hidden;
+    opacity:1;
 }
 .content-holder h2 {
     color: #FFB03B;
-    font-size: 32px;
-    padding-bottom: 15px;
+    font-size: 28px;
+    /*padding-bottom: 15px;*/
     font-family: 'Satisfy', sans-serif;
 }
-.content-holder address strong {
-    color: #FFB03B;
-    padding: 10px 0px;
-}
+
 .details-text p {
-    color: #E8E8E8;
-    line-height: 26px;
+    color: white;
+    line-height: 20px;
     letter-spacing: 1px;
-    font-weight: 300;
+    margin-left:10px;
+    font-weight:bolder;
 }
 .btn-read-more {
     background: #FFB03B;
@@ -319,6 +266,7 @@ table {
     color: #000;
     text-transform: uppercase;
     margin-top: 10px;
+    margin-left:10px;
 }
 .btn-read-more:hover
 {
@@ -473,4 +421,32 @@ table {
     }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+.item {
+    height:contain;
+}
+/*
+.mySlides {
+height:290px;
+}*/
+
+
+.carousel-inner {
+    height:100px;
+    overflow: initial;
+    
+}
+
+
+
+.carousel-inner>.item>img {
+    height: 308px;
+    width: 100%;
+    opacity:0.3;
+}
+
+
+.content-holder {
+    margin-top:-20px;
 }

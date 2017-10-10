@@ -20,52 +20,51 @@
 <body>
     <!-- <div class="container"> -->
     <section id="event">
-        <div class="bg-color section-padding row">
+        <div class="bg-color section-padding row" id="less-margin">
             <!-- <div> -->
             <div class="col-xs-12 text-center" style="padding:60px;">
                 <h1 class="header-h">Foodifai</h1>
                 <p class="header-p">Turn your picture into your next meal</p>
             </div>
-            <div class="col-md-12"  id="video-slide" style="padding-bottom:60px;">
+            <div class="col-md-12" id="video-slide" style="padding-bottom:60px;">
                 <div class="item active left">
                     <div class="col-md-6 col-sm-6 left-images">
                         <img src="assets/images/ham-wrap.jpg" class="img-responsive">
                     </div>
-                    <div class="col-md-6 col-sm-6 details-text">
-                        <!-- <div class="container"> -->
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img class="mySlides" src="assets/images/ham-wrap.jpg" alt="Ham wrap">
-                                    </div>
-                                    <div class="item">
-                                        <img class="mySlides" src="assets/images/healthy-ingredients.jpg" alt="Healthy Ingredients">
-                                    </div>
-                                    <div class="item">
-                                        <img class="mySlides" src="assets/images/healthy-vegetables.jpg" alt="Vegetables">
-                                    </div>
-                                    <div class="item">
-                                        <img class="mySlides" src="assets/images/steak.jpg" alt="Steak">
-                                    </div>
+                    <!-- <div class="col-md-6 col-sm-6 details-text"> -->
+                    <div class="row">
+                        <div id="myCarousel" class="carousel slide col-md-6 details-text" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="mySlides" src="assets/images/ham-wrap.jpg" alt="Ham wrap">
                                 </div>
-                                <!-- Left and right controls -->
-                        <div class="content-holder">
-                            <h2 class="text-center">Whet your appetite with Foodifai</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
-                            <button class="btn btn-imfo btn-read-more">Give it a try</a>
-                        </div>
+                                <div class="item">
+                                    <img class="mySlides" src="assets/images/healthy-ingredients.jpg" alt="Healthy Ingredients">
+                                </div>
+                                <div class="item">
+                                    <img class="mySlides" src="assets/images/healthy-vegetables.jpg" alt="Vegetables">
+                                </div>
+                                <div class="item">
+                                    <img class="mySlides" src="assets/images/steak.jpg" alt="Steak">
+                                </div>
                             </div>
-                        <!-- </div> -->
-
+                            <!-- Left and right controls -->
+                            <div class="content-holder">
+                                <h2 class="text-center">Whet your appetite with Foodifai</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
+                                <button class="btn btn-read-more">Give it a try</button>
+                            </div>
+                        </div>
                     </div>
+                    <!-- </div> -->
                 </div>
             </div>
             <!-- </div> -->
@@ -74,10 +73,11 @@
     </section>
     <!-- </div> -->
     <!--banner-->
-    <section id="banner">
+    <!-- <section id="banner">
         <div class="bg-color">
-            <!-- <header id="header"> -->
-            <!-- div class="container">
+ -->
+    <!-- <header id="header"> -->
+    <!-- div class="container">
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <a href="#about">About</a>
@@ -85,11 +85,11 @@
                         <a href="#menu-list">Menu</a>
                         <a href="#contact">Book a table</a>
                     </div> -->
-            <!-- <! Use any element to open the sidenav -->
-            <!-- <span onclick="openNav()" class="pull-right menu-icon">☰</span> -->
-            <!-- </div> -->
-            <!-- </header> -->
-            <div class="container">
+    <!-- <! Use any element to open the sidenav -->
+    <!-- <span onclick="openNav()" class="pull-right menu-icon">☰</span> -->
+    <!-- </div> -->
+    <!-- </header> -->
+    <!-- <div class="container">
                 <div class="row">
                     <div class="inner text-center">
                         <h1 class="logo-name">Delicious</h1>
@@ -99,10 +99,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- / banner -->
     <!--about-->
-    <section id="about" class="section-padding">
+    <!--  <section id="about" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center marb-35">
@@ -127,66 +127,69 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <!-- <img src="img/res01.jpg" alt="" class="img-responsive"> -->
-                    </div>
+                         
+                     </div>
                 </div>
                 <div class="col-md-1"></div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--/about-->
     <!-- contact -->
-    <section id="contact" class="section-padding">
-    </section>
+    <!--     <section id="contact" class="section-padding">
+    </section> -->
     <!-- / contact -->
     <section id="main-div">
-        <!-- div class="w3-content w3-section">
-            <img class="mySlides w3-animate-top" src="assets/images/ham-wrap.jpg">
-            <img class="mySlides w3-animate-bottom" src="assets/images/healthy-ingredients.jpg">
-            <img class="mySlides w3-animate-top" src="assets/images/healthy-vegetables.jpg">
-            <img class="mySlides w3-animate-bottom" src="assets/images/steak.jpg">
-            </div> -->
-            <input type="hidden" id="hidden-counter" name="hidden-counter" value="1" />
-            <div style="float:left">
-                <button id="predict-url" onclick="
-      if(imgurl.value == '') { 
-        alert('Please enter an image URL!'); 
-        return;
-      } 
-    
-      else if (!validFile(imgurl.value)) {
-        alert('Supported File Types: JPEG, PNG, TIFF, BMP');
-        return;
-      }
-    
-      predict_click($('#imgurl').val(), 'url');" style="width:112px">Predict a URL!</button>
-                <input type="text" id="imgurl" placeholder="Image URL" size="80" />
-                <br/>
-                <br/>
-                <button onclick="
-      if(filename.value == '') { 
-        alert('Please browse for a file!'); 
-        return;
-      } 
-    
-      else if (!validFile(filename.value)) {
-        alert('Supported File Types: JPEG, PNG, TIFF, BMP');
-        return;
-      }
-      predict_click($('#filename').val(), 'file');">Predict a local file!</button>
-                <input type="file" id="filename" placeholder="Filename" size="80" />
-            </div>
-            <div id="predictions">
-                <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
-                    <img id="img_preview1" src="" width="400" />
+
+      <!-- Maybe append this using JS -->
+        <div class="fullscreen-bg">
+            <video loop muted autoplay class="fullscreen-bg__video">
+                <source src="assets/foodifai.mp4" type="video/mp4">
+            </video>
+        </div>
+        <input type="hidden" id="hidden-counter" name="hidden-counter" value="1" />
+        <div id="predict-food">
+                    <button id="predict-url" onclick="
+              if(imgurl.value == '') { 
+                alert('Please enter an image URL!'); 
+                return;
+              } 
+            
+              else if (!validFile(imgurl.value)) {
+                alert('Supported File Types: JPEG, PNG, TIFF, BMP');
+                return;
+              }
+            
+              predict_click($('#imgurl').val(), 'url');" style="width:112px">Predict a URL!</button>
+                    <input type="text" id="imgurl" placeholder="Image URL" size="80" />
                     <br/>
-                    <span id="add-image-button" style="visibility:hidden"><button onClick="addImageToApp(1)">Add image to application</button></span>
-                </div>
-                <div id="concepts" class="conceptBox">
-                </div>
+                    <br/>
+                    <button onclick="
+              if(filename.value == '') { 
+                alert('Please browse for a file!'); 
+                return;
+              } 
+            
+              else if (!validFile(filename.value)) {
+                alert('Supported File Types: JPEG, PNG, TIFF, BMP');
+                return;
+              }
+              predict_click($('#filename').val(), 'file');">Predict a local file!</button>
+                    <input type="file" id="filename" placeholder="Filename" size="80" />
+        </div>
+        <div id="predictions">
+            <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
+                <img id="img_preview1" src="" width="400" />
+                <br/>
+                <span id="add-image-button" style="visibility:hidden"><button onClick="addImageToApp(1)">Add image to application</button></span>
             </div>
-            <button id="next-imgs">next images</button>
-            <div id="foods"></div>
+            <div id="concepts" class="conceptBox">
+            </div>
+        </div>
+        <!-- <button id="next-imgs">next images</button> -->
+
+        <!-- foods div for page 3 -->
+        <div id="foods"></div>
     </section>
     <!-- footer -->
     <!-- <footer class="footer text-center">

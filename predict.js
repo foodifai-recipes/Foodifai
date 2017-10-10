@@ -158,7 +158,6 @@ $(document).ready(function() {
 
 $(".btn-read-more").on("click", function(){
   $("#event").hide();
-
 });
 
 

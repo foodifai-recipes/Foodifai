@@ -172,3 +172,11 @@ ul li i {
     text-align: center;
     background-color: #888;
 }
+
+
+
+#predict-food {
+    position:relative;
+    left:25%;
+    top:10em;
+}

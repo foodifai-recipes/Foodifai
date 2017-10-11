@@ -5,6 +5,37 @@
     source - 'url' or 'file'
 */
 
+// $("#filename").on("value", function(){
+//   predict_click($('#filename').val(), 'file');
+
+// })
+
+$("#filename").change(function() {
+    if (filename.value == '') {
+        alert('Please browse for a file!');
+        return;
+    } else if (!validFile(filename.value)) {
+        alert('Supported File Types: JPEG, PNG, TIFF, BMP');
+        return;
+    } else {
+        predict_click($('#filename').val(), 'file');
+    }
+
+});
+
+
+$("#imgurl").change(function() {
+    if (imgurl.value == '') {
+        alert('Please enter an image URL!');
+        return;
+    } else if (!validFile(imgurl.value)) {
+        alert('Supported File Types: JPEG, PNG, TIFF, BMP');
+        return;
+    }
+    else{
+      predict_click($('#imgurl').val(), 'url');
+    }
+});
 
 
 
@@ -66,7 +97,8 @@ var ingredient4 = "";
 var ingredient5 = "";
 
 function doPredict(value) {
-
+                $("#main-div").hide();
+                $("#loading-wrapper").show();
     var modelID = getSelectedModel();
 
     app.models.predict(modelID, value).then(
@@ -136,10 +168,14 @@ function doPredict(value) {
 
             $('#concepts').html(conceptNames);
 
-
-            document.getElementById("add-image-button").style.visibility = "visible";
-            console.log(arrOfFoods);
             b();
+            
+            
+            
+
+            // document.getElementById("add-image-button").style.visibility = "visible";
+            // console.log(arrOfFoods);
+
         },
         function(err) {
             console.log(err);
@@ -152,14 +188,16 @@ function doPredict(value) {
 var nextCount = 0;
 
 $(document).ready(function() {
-    $("#main-div").hide();
-    $("#banner").hide();
+    // $("#event").hide();
     // $("#main-div").hide();
+    $("#banner").hide();
+    $("#loading-wrapper").hide();
+    $("#main-div").hide();
 
-$(".btn-read-more").on("click", function(){
-  $("#event").hide();
-  $("#main-div").show();
-});
+    $(".btn-read-more").on("click", function() {
+        $("#event").hide();
+        $("#main-div").show();
+    });
 
 
     $("#next-imgs").on("click", function() {
@@ -212,6 +250,9 @@ $(".btn-read-more").on("click", function(){
 });
 
 function b() {
+  // $("#loading-wrapper").show();
+    
+    
     var food1 = arrOfFoods[0];
     var food2 = arrOfFoods[1];
     var food3 = arrOfFoods[2];
@@ -253,7 +294,11 @@ function b() {
             foodDiv.append(ingString.length + " Ingredients")
             $("#foods").append(foodDiv);
         }
+        $("#loading-wrapper").hide();
+      $("#main-div").show();  
     });
+    
+    
 };
 
 /*
@@ -278,5 +323,3 @@ function capitalize(s) {
 
 
 // If user is not logged in, redirect to login page
-
-

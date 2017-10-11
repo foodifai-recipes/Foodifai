@@ -51,13 +51,14 @@ body {
 
 .header-h {
     color: black;
-    font-size: 46px;
+    font-size: 64px;
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
 }
 .header-p {
-    color: darkslategray;
-    font-size: 16px;
+    color: black;
+    font-size: 24px;
+    font-weight:500;
 }
 .msg-row {
     margin-top: 56px;

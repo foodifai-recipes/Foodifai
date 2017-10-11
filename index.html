@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/first-page.css" type="text/css">
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-
 </head>
 
-<body >
+<body>
     <!-- <div class="container"> -->
-    <section id="event" >
+    <section id="event">
         <div class="bg-color section-padding row" id="less-margin">
-            <!-- <div> -->
             <div class="col-xs-12 text-center" style="padding:60px;">
                 <h1 class="header-h">Foodifai</h1>
                 <p class="header-p">Turn your picture into your next meal</p>
@@ -55,133 +53,48 @@
                             <div class="content-holder">
                                 <h2 class="text-center">Whet your appetite with Foodifai</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
-                                <button class="btn btn-read-more">Give it a try</button>
+                                <button class="btn btn-read-more">Look for a recipe!</button>
                             </div>
                         </div>
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
-            <!-- </div> -->
-            <!-- </div> -->
         </div>
     </section>
-    <!-- </div> -->
-    <!--banner-->
-    <!-- <section id="banner">
-        <div class="bg-color">
- -->
-    <!-- <header id="header"> -->
-    <!-- div class="container">
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#about">About</a>
-                        <a href="#event">Event</a>
-                        <a href="#menu-list">Menu</a>
-                        <a href="#contact">Book a table</a>
-                    </div> -->
-    <!-- <! Use any element to open the sidenav -->
-    <!-- <span onclick="openNav()" class="pull-right menu-icon">☰</span> -->
-    <!-- </div> -->
-    <!-- </header> -->
-    <!-- <div class="container">
-                <div class="row">
-                    <div class="inner text-center">
-                        <h1 class="logo-name">Delicious</h1>
-                        <h2>Food To fit your lifestyle & health.</h2>
-                        <p>Specialized in Indian Cuisine!!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- / banner -->
-    <!--about-->
-    <!--  <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center marb-35">
-                    <h1 class="header-h">Delicious Journey</h1>
-                    <p class="header-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                        <br>nibh euismod tincidunt ut laoreet dolore magna aliquam. </p>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="about-info">
-                            <h2 class="heading">vel illum qui dolorem eum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit inventore culpa vero accusamus in nostrum dignissimos modi, molestiae. Autem iusto esse necessitatibus ex corporis earum quaerat voluptates quibusdam dicta!</p>
-                            <div class="details-list">
-                                <ul>
-                                    <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                    <li><i class="fa fa-check"></i>Quisque finibus eu lorem quis elementum</li>
-                                    <li><i class="fa fa-check"></i>Vivamus accumsan porttitor justo sed </li>
-                                    <li><i class="fa fa-check"></i>Curabitur at massa id tortor fermentum luctus</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                         
-                     </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div>
-    </section> -->
-    <!--/about-->
-    <!-- contact -->
-    <!--     <section id="contact" class="section-padding">
-    </section> -->
-    <!-- / contact -->
     <section id="main-div">
         <!-- Maybe append this using JS -->
         <div class="fullscreen-bg">
-
+            <video loop muted autoplay class="fullscreen-bg__video">
+                <source src="assets/foodifai.mp4" type="video/mp4">
+            </video>
         </div>
         <input type="hidden" id="hidden-counter" name="hidden-counter" value="1" />
         <div id="predict-food">
-            <input type="text" id="imgurl" placeholder="Image URL" size="80">
-            <span class="glyphicons glyphicons-search"></span>
-            <button id="predict-url" onclick="
-              if(imgurl.value == '') { 
-                alert('Please enter an image URL!'); 
-                return;
-              } 
-            
-              else if (!validFile(imgurl.value)) {
-                alert('Supported File Types: JPEG, PNG, TIFF, BMP');
-                return;
-              }
-            
-              predict_click($('#imgurl').val(), 'url');">You're one click away from a delicious recipe.</button>
-
-            <button onclick="
-              if(filename.value == '') { 
-                alert('Please browse for a file!'); 
-                return;
-              } 
-            
-              else if (!validFile(filename.value)) {
-                alert('Supported File Types: JPEG, PNG, TIFF, BMP');
-                return;
-              }
-              predict_click($('#filename').val(), 'file');">Predict a local file!</button>
-            <input type="file" id="filename" placeholder="Filename" size="80" />
+            <input type="text" id="imgurl" placeholder="Image URL">
+            <!-- <span class="glyphicons glyphicons-search"></span> -->
+            <!-- <button id="predict-url" >You're one click away from a delicious recipe.</button> -->
+            <label class="fileContainer">
+                Or upload from your computer by clicking here.
+                <br/> Yes, It's that simple!
+                <input type="file" id="filename" placeholder="Filename" />
+            </label>
         </div>
+
         <div id="predictions">
             <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
                 <img id="img_preview1" src="" width="400" />
                 <br/>
-                <span id="add-image-button" style="visibility:hidden"><button onClick="addImageToApp(1)">Add image to application</button></span>
             </div>
             <div id="concepts" class="conceptBox">
             </div>
         </div>
         <!-- <button id="next-imgs">next images</button> -->
-        <!-- foods div for page 3 -->
         <div id="foods"></div>
     </section>
+    <div id="loading-wrapper">
+            <div id="loading-text">LOADING</div>
+            <div id="loading-content"></div>
+        </div>
     <!-- footer -->
     <!-- <footer class="footer text-center">
             <div class="footer-top">
@@ -211,13 +124,12 @@
                     </div>
                 </div>
             < /div>
-         </footer> -->    
-             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="myApiKey"></script> -->
+         </footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="keys.js"></script>
     <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-             <script type="text/javascript" src="food.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="food.js"></script>
     <script type="text/javascript" src="predict.js"></script>
 </body>
 

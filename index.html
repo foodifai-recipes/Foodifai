@@ -4,22 +4,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Foodifai</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="myApiKey"></script> -->
-    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
     <!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/first-page.css" type="text/css">
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-    <script type="text/javascript" src="food.js"></script>
-    <script type="text/javascript" src="predict.js"></script>
+
 </head>
 
-<body>
+<body >
     <!-- <div class="container"> -->
-    <section id="event">
+    <section id="event" >
         <div class="bg-color section-padding row" id="less-margin">
             <!-- <div> -->
             <div class="col-xs-12 text-center" style="padding:60px;">
@@ -140,16 +135,15 @@
     </section> -->
     <!-- / contact -->
     <section id="main-div">
-
-      <!-- Maybe append this using JS -->
+        <!-- Maybe append this using JS -->
         <div class="fullscreen-bg">
-            <video loop muted autoplay class="fullscreen-bg__video">
-                <source src="assets/foodifai.mp4" type="video/mp4">
-            </video>
+
         </div>
         <input type="hidden" id="hidden-counter" name="hidden-counter" value="1" />
         <div id="predict-food">
-                    <button id="predict-url" onclick="
+            <input type="text" id="imgurl" placeholder="Image URL" size="80">
+            <span class="glyphicons glyphicons-search"></span>
+            <button id="predict-url" onclick="
               if(imgurl.value == '') { 
                 alert('Please enter an image URL!'); 
                 return;
@@ -160,11 +154,9 @@
                 return;
               }
             
-              predict_click($('#imgurl').val(), 'url');" style="width:112px">Predict a URL!</button>
-                    <input type="text" id="imgurl" placeholder="Image URL" size="80" />
-                    <br/>
-                    <br/>
-                    <button onclick="
+              predict_click($('#imgurl').val(), 'url');">You're one click away from a delicious recipe.</button>
+
+            <button onclick="
               if(filename.value == '') { 
                 alert('Please browse for a file!'); 
                 return;
@@ -175,7 +167,7 @@
                 return;
               }
               predict_click($('#filename').val(), 'file');">Predict a local file!</button>
-                    <input type="file" id="filename" placeholder="Filename" size="80" />
+            <input type="file" id="filename" placeholder="Filename" size="80" />
         </div>
         <div id="predictions">
             <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
@@ -187,7 +179,6 @@
             </div>
         </div>
         <!-- <button id="next-imgs">next images</button> -->
-
         <!-- foods div for page 3 -->
         <div id="foods"></div>
     </section>
@@ -220,7 +211,14 @@
                     </div>
                 </div>
             < /div>
-         </footer> -->
+         </footer> -->    
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="myApiKey"></script> -->
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+             <script type="text/javascript" src="food.js"></script>
+    <script type="text/javascript" src="predict.js"></script>
 </body>
 
 </html>

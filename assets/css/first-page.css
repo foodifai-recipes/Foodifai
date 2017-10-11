@@ -475,6 +475,17 @@ height:290px;
   height: 100%;
 }
 
+div.row {
+    margin:0;
+}
+
+.glyphicon-search {
+    position:relative;
+    left:-3em;
+    font-size:2em;
+}
+
+
 @media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
     height: 300%;

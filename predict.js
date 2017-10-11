@@ -152,12 +152,13 @@ function doPredict(value) {
 var nextCount = 0;
 
 $(document).ready(function() {
-
+    $("#main-div").hide();
     $("#banner").hide();
     // $("#main-div").hide();
 
 $(".btn-read-more").on("click", function(){
   $("#event").hide();
+  $("#main-div").show();
 });
 
 
@@ -271,3 +272,11 @@ function getSelectedModel() {
 function capitalize(s) {
     return s[0].toUpperCase() + s.slice(1);
 }
+
+
+
+
+
+// If user is not logged in, redirect to login page
+
+

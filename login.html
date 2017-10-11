@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Clarifai JavaScript Stater</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="predict.js"></script>
-  <script type="text/javascript" src="myApiKey"></script>
-  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-  <script type="text/javascript" src="food.js"></script>
 
-  <link rel="stylesheet" href="assets/styles.css" type="text/css">
-  
-  
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Clarifai JavaScript Stater</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/login.css" type="text/css">
 </head>
 
 <body>
-<div id="loading-wrapper">
-  <div id="loading-text">LOADING</div>
-  <div id="loading-content"></div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="container">
+        <br>
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1>Are you ready to explore recipes</h1>
+        </div>
+        <div class="row">
+            <!-- Sign-Up Panel-->
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User Registration Details</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form" onsubmit="return false">
+                            <div class="form-group">
+                                <label for="name-input">Enter Your Name:</label>
+                                <input class="form-control" id="name-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-input">Email:</label>
+                                <input class="form-control" id="email-input">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="comment-input">Password:</label>
+                                <input class="form-control" id="password-input"> -->
+                                <label>Password :</label>
+                                <input class="form-control" input type="password" name="password" id="password-input">
+                                <br/>
+                            </div>
+                            <br>
+                            <button class="btn btn-default" id="sign-in">Sign In</button>
+                            <button class="btn btn-default" id="add-user">Register New User</button>
+                            <br>
+                            <div class="form-group">
+                                <label for="login-comments"></label>
+                                <textarea class="form-control" id="login-message"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script type="text/javascript" src="UserRegistration.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="predict.js"></script>
+    <!-- <script type="text/javascript" src="myApiKey"></script> -->
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+    <script type="text/javascript" src="food.js"></script>
 </body>
+
+</html>
+</body>
+
 </html>

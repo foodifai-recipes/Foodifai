@@ -240,15 +240,16 @@ body {
     background-color: rgb(14, 4, 4);
   /*  border-right: 2px solid #A87F41;*/
     padding: 18px;
-    height:19em;
+    height:inherit;
     overflow: hidden;
-    opacity:1;
 }
 .content-holder h2 {
     color: #FFB03B;
     font-size: 28px;
     /*padding-bottom: 15px;*/
     font-family: 'Satisfy', sans-serif;
+    position:relative;
+    top:-40px;
 }
 
 .details-text p {
@@ -448,14 +449,19 @@ height:290px;
 
 
 .carousel-inner>.item>img {
-    height: 308px;
+    height: 300px;
     width: 100%;
     opacity:0.3;
+    padding-bottom: 24px;
 }
 
-
 .content-holder {
-    margin-top:-20px;
+    margin-top: -20px;
+}
+.content-holder > p, button{
+    position:relative;
+    top:-30px;
+
 }
 
 .fullscreen-bg {

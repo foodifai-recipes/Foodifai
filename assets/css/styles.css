@@ -249,7 +249,7 @@ label {
 
 
 body {
-  background-color: rgba(0, 0, 0, 0.5)
+  background-color: rgba(0, 0, 0, .85)
 }
 
 
@@ -392,4 +392,135 @@ body {
   margin: 0 auto;
   text-align: center;
   background-color: #888;
+}
+
+
+.container-fluid {
+  padding: 0;
+  background-color: rgba(0, 0, 0, .5);
+  min-height: 100vh;
+  overflow:hidden;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+a.col-md-3 {
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+  
+  .half-width {
+  width: 50%;
+  float: left;
+}
+
+
+/** Not sure if I want to include name nav in mobile version
+a.name {
+  color: black;
+  background-color: rgb(245, 245, 245);
+  position:relative;
+}
+**/
+/** NAV BAR **/
+/* a.portfolio {
+  background-color: rgb(171, 152, 122);
+  position:fixed;
+  top:0;
+
+}
+
+a.about {
+  background-color: black;
+  position:fixed;
+  top:3.5em;
+
+}
+
+a.contact {
+  background-color: rgb(255, 83, 61);
+  position:fixed;
+  top:7em;
+
+} */
+
+/** NAME SECTION **/
+/* #name {
+
+  padding-top: 8em;
+}
+ */
+h1 {
+  color: white;
+  padding-top: 2em;
+}
+
+hr {
+  border: 1px solid black;
+  width: 75%;
+}
+
+#name p {
+  color: white;
+  margin: 1em 4em;
+  text-align: center;
+}
+
+/*  @media only screen and (min-width: 768px) { */
+  /** BASE STYLES **/
+   
+   .full-width {
+    width: 100%;
+  }
+   
+  a.col-md-3 {
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+  }
+  
+   /** NAVBAR **/
+  a.name {
+    color: black;
+    background-color: rgb(245, 245, 245);
+    position:fixed;
+    left:0%;
+    top:0%;
+    z-index:2;
+  }
+   
+  a.portfolio {
+    background-color: rgb(171, 152, 122);
+    position: fixed;
+    left: 25%;
+    top:0%;
+    z-index:2;
+  }
+   
+  a.about {
+    background-color: black;
+    position: fixed;
+    left:50%;
+    top:0%;
+    z-index:2;
+  }
+   
+  a.contact {
+    background-color: rgb(255, 83, 61);
+    position: fixed;
+    left:75%;
+    top:0%;
+    z-index:2;
+  }
+  
+#middle {
+  position:relative;
+  top:10em;
 }

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Clarifai JavaScript Stater</title>
+    <meta charset="UTF-8">
+    <title>User Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/login.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
 </head>
 
 <body>
     <div class="container">
         <br>
         <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1>Are you ready to explore recipes</h1>
-        </div>
+        <!-- <div class="jumbotron"> -->
+        <!-- <h5>Are you ready to explore recipes</h5> -->
+        <!-- </div> -->
         <div class="row">
             <!-- Sign-Up Panel-->
-            <div class="col-lg-6">
+            <div class="col-lg-6 no-padding">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">User Registration Details</h3>
@@ -43,28 +44,50 @@
                             <br>
                             <button class="btn btn-default" id="sign-in">Sign In</button>
                             <button class="btn btn-default" id="add-user">Register New User</button>
-                            <br>
-                            <div class="form-group">
-                                <label for="login-comments"></label>
-                                <textarea class="form-control" id="login-message"></textarea>
+                            <button class="btn btn-default" input type="reset" id="clear-user">Clear</button>
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content"> <span class="close">&times;</span>
+                                    <p> This email address is already registered. Please sign-in instead.</p>
+                                </div>
                             </div>
+                            <div id="myModal2" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content"> <span class="close">&times;</span>
+                                    <p>Weak password</p>
+                                </div>
+                            </div>
+                            <div id="myModal3" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content"> <span class="close">&times;</span>
+                                    <p>Please enter correct password</p>
+                                </div>
+                            </div>
+                            <div id="myModal4" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content"> <span class="close">&times;</span>
+                                    <p>You must be a new user. Please click on the Register button.</p>
+                                </div>
+                            </div>
+                            <div id="myModal5" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content"> <span class="close">&times;</span>
+                                    <p> Welcome Back!"</p>
+                                </div>
+                            </div>
+                            <br>
+                           
                         </form>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script type="text/javascript" src="UserRegistration.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="predict.js"></script>
-    <!-- <script type="text/javascript" src="myApiKey"></script> -->
-    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-    <script type="text/javascript" src="food.js"></script>
-</body>
-
-</html>
 </body>
 
 </html>

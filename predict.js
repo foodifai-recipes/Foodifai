@@ -10,6 +10,8 @@
 
 // })
 
+
+
 $("#filename").change(function() {
     if (filename.value == '') {
         alert('Please browse for a file!');
@@ -110,7 +112,10 @@ function doPredict(value) {
             var allItems = response.rawData.outputs[0].data.concepts;
             for (var i = 0; i < allItems.length; i++) {
                 counter += 1;
-
+                // if (response.rawData.outputs[0].data.concepts[i].name == JSON.parse("aliment")){
+                //   console.log("got it");
+                //   return;
+                // }
                 arrOfFoods.push(response.rawData.outputs[0].data.concepts[i].name);
 
 
@@ -193,6 +198,7 @@ $(document).ready(function() {
     $("#banner").hide();
     $("#loading-wrapper").hide();
     $("#main-div").hide();
+    $(".container-fluid").hide();
 
     $(".btn-read-more").on("click", function() {
         $("#event").hide();
@@ -271,6 +277,10 @@ function b() {
         var results = response.hits;
         nextCount = 0;
         for (var j = nextCount; j < nextCount + 5; j++) {
+            if (results[j].recipe == undefined){
+              return
+            }
+            
             var foodDiv = $("<div>");
             foodDiv.attr("id", "container");
             var p = $("<p>").text(Math.ceil(results[j].recipe.calories) + " Calories");
@@ -293,13 +303,33 @@ function b() {
             foodDiv.append("<br>")
             foodDiv.append(ingString.length + " Ingredients")
             $("#foods").append(foodDiv);
-        }
+        
+      }
         $("#loading-wrapper").hide();
-      $("#main-div").show();  
+      $(".container-fluid").show();  
+      $("body").css("background-color", "rgb(245, 245, 245)");
+      
     });
     
     
 };
+
+
+var hiding = $(".panel-body");  
+  
+$(".panel").hover(handlerIn, handlerOut);
+ 
+
+
+// hiding.css("background-color", "black");
+
+function handlerIn (){
+  $(this).css("opacity", 0.1);
+}
+
+function handlerOut (){
+  $(this).css("opacity", 1);
+}
 
 /*
   Purpose: Return a back-end model id based on current user selection

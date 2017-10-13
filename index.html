@@ -13,17 +13,89 @@
 
 <body>
     <!-- <div class="container"> -->
+    <section id="login">
+        <div class="container">
+            <br>
+            <div class="row">
+                <!-- Sign-Up Panel-->
+                <div class="col-lg-6 no-padding">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">User Registration Details</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- Sign-up Form (note the various input "types")-->
+                            <form role="form" onsubmit="return false">
+                                <div class="form-group">
+                                    <label for="name-input">Enter Your Name:</label>
+                                    <input class="form-control" id="name-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-input">Email:</label>
+                                    <input class="form-control" id="email-input">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password :</label>
+                                    <input class="form-control" input type="password" name="password" id="password-input">
+                                    <br/>
+                                </div>
+                                <br>
+                                <button class="btn btn-default" id="sign-in">Sign In</button>
+                                <button class="btn btn-default" id="add-user">Register New User</button>
+                                <button class="btn btn-default" input type="reset" id="clear-user">Clear</button>
+                                <div id="myModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content"> <span class="close" id="email-registered">&times;</span>
+                                        <p> This email address is already registered. Please sign-in instead.</p>
+                                    </div>
+                                </div>
+                                <div id="myModal2" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content"> <span class="close" id="weak-password">&times;</span>
+                                        <p>Weak password</p>
+                                    </div>
+                                </div>
+                                <div id="myModal3" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content"> <span class="close" id="incorrect-close">&times;</span>
+                                        <p>Please enter correct password</p>
+                                    </div>
+                                </div>
+                                <div id="myModal4" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content"> <span class="close" id="new-user">&times;</span>
+                                        <p>You must be a new user. Please click on the Register button.</p>
+                                    </div>
+                                </div>
+                                <div id="myModal5" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content"> <span class="close" id="welcome-back">&times;</span>
+                                        <p> Welcome Back!"</p>
+                                    </div>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 left-images">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        
+                          <video class="embed-responsive-item" controls src="assets/presentation.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
     <section id="event">
         <div class="bg-color section-padding row" id="less-margin">
             <div class="col-xs-12 text-center" style="padding:60px;">
                 <h1 class="header-h">Foodifai</h1>
-                <p class="header-p">Turn your picture into your next meal</p>
             </div>
-            <div class="col-md-12" id="video-slide" style="padding-bottom:60px;">
-                <div class="item active left">
-                    <div class="col-md-6 col-sm-6 left-images">
-                        <img src="assets/images/ham-wrap.jpg" class="img-responsive">
-                    </div>
+            <div class="row">
+                <div class="col-md-12" id="video-slide">
+                    <!-- <div class="item active left"> -->
                     <!-- <div class="col-md-6 col-sm-6 details-text"> -->
                     <div class="row">
                         <div id="myCarousel" class="carousel slide col-md-6 details-text" data-ride="carousel">
@@ -51,7 +123,7 @@
                             </div>
                             <!-- Left and right controls -->
                             <div class="content-holder">
-                                <h2 class="text-center">Whet your appetite with Foodifai</h2>
+                                <h2 class="text-center">Turn your picture into your next meal with Foodifai</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eos suscipit earum voluptas aliquam recusandae, quae iure adipisci, inventore quia, quos delectus quaerat praesentium id expedita nihil illo accusantium, tempora.</p>
                                 <button class="btn btn-read-more">Look for a recipe!</button>
                             </div>
@@ -88,7 +160,6 @@
             </div>
         </div>
         <!-- <button id="next-imgs">next images</button> -->
-        <div id="foods"></div>
     </section>
     <div id="loading-wrapper">
         <div id="loading-text">LOADING</div>
@@ -96,35 +167,31 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <a href="#" class="col-md-3 text-center name">Lorem</a>
-            <a href="#portfolio" class="col-md-3 text-center portfolio" id="portfolio-desktop">Ipsum</a>
-            <a href="#about" class="col-md-3 text-center about" id="about-desktop">About</a>
-            <a href="#contact" class="col-md-3 text-center contact" id="contact-desktop">Contact</a>
+            <a href="#about" class="col-md-6 text-center about" id="about-desktop">About</a>
+            <a href="#contact" class="col-md-6 text-center contact" id="contact-desktop">Return to upload screen</a>
         </div>
         <div id="name">
             <h1 class="text-center">Bon Appétit</h1>
             <hr>
+            <div id="foods"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="panel panel-primary">
-                            <!--         <div class="panel-heading">BLACK FRIDAY DEAL</div> -->
-                            <div class="panel-body"><img src="https://thumb7.shutterstock.com/display_pic_with_logo/438409/540997561/stock-photo-selection-of-healthy-food-540997561.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <!--         <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+                            <div class="panel-body" id="box0">
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-4" id="middle">
                         <div class="panel panel-danger">
-                            <!--         <div class="panel-heading">BLACK FRIDAY DEAL</div> -->
-                            <div class="panel-body"><img src="https://thumb7.shutterstock.com/display_pic_with_logo/438409/540997561/stock-photo-selection-of-healthy-food-540997561.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <!--         <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+                            <div class="panel-body" id="box1">
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="panel panel-success">
-                            <!--         <div class="panel-heading">BLACK FRIDAY DEAL</div> -->
-                            <div class="panel-body"><img src="https://thumb7.shutterstock.com/display_pic_with_logo/438409/540997561/stock-photo-selection-of-healthy-food-540997561.jpg" style="width:100%" alt="Image"></div>
-                            <!--         <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+                            <div class="panel-body" id="box2">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,28 +201,18 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="panel panel-primary">
-                            <!--         <div class="panel-heading">BLACK FRIDAY DEAL</div> -->
-                            <div class="panel-body"><img src="https://thumb7.shutterstock.com/display_pic_with_logo/438409/540997561/stock-photo-selection-of-healthy-food-540997561.jpg" style="width:100%" alt="Image"></div>
-                            <!--         <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+                            <div class="panel-body" id="box3">
+                            </div>
                         </div>
                     </div>
-                    <!--     <div class="col-sm-4"> 
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div> -->
                     <div class="col-sm-4 col-sm-offset-4">
                         <div class="panel panel-primary">
-                            <!--         <div class="panel-heading">BLACK FRIDAY DEAL</div> -->
-                            <div class="panel-body"><img src="https://thumb7.shutterstock.com/display_pic_with_logo/438409/540997561/stock-photo-selection-of-healthy-food-540997561.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                            <!--         <div class="panel-footer">Buy 50 mobiles and get a gift card</div> -->
+                            <div class="panel-body" id="box4">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--     <p>I am a passionate web developer, always looking for ways to hone my craft. <br><strong>Goals?</strong> To make a better tomorrow, for all of us.</p> -->
         </div>
     </div>
     <!-- footer -->
@@ -190,6 +247,7 @@
          </footer> -->
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="UserRegistration.js"></script>
     <script type="text/javascript" src="keys.js"></script>
     <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

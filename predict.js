@@ -33,9 +33,8 @@ $("#imgurl").change(function() {
     } else if (!validFile(imgurl.value)) {
         alert('Supported File Types: JPEG, PNG, TIFF, BMP');
         return;
-    }
-    else{
-      predict_click($('#imgurl').val(), 'url');
+    } else {
+        predict_click($('#imgurl').val(), 'url');
     }
 });
 
@@ -99,8 +98,8 @@ var ingredient4 = "";
 var ingredient5 = "";
 
 function doPredict(value) {
-                $("#main-div").hide();
-                $("#loading-wrapper").show();
+    $("#main-div").hide();
+    $("#loading-wrapper").show();
     var modelID = getSelectedModel();
 
     app.models.predict(modelID, value).then(
@@ -174,9 +173,9 @@ function doPredict(value) {
             $('#concepts').html(conceptNames);
 
             b();
-            
-            
-            
+
+
+
 
             // document.getElementById("add-image-button").style.visibility = "visible";
             // console.log(arrOfFoods);
@@ -195,6 +194,7 @@ var nextCount = 0;
 $(document).ready(function() {
     // $("#event").hide();
     // $("#main-div").hide();
+    $("#event").hide();
     $("#banner").hide();
     $("#loading-wrapper").hide();
     $("#main-div").hide();
@@ -204,61 +204,61 @@ $(document).ready(function() {
         $("#event").hide();
         $("#main-div").show();
     });
-
-
-    $("#next-imgs").on("click", function() {
-        var food1 = arrOfFoods[0];
-        var food2 = arrOfFoods[1];
-        var food3 = arrOfFoods[2];
-        var food4 = arrOfFoods[3];
-        var food5 = arrOfFoods[4];
-
-        var app_id = "cbaba7cb";
-        var app_key = "4964ec0ab446a8f304ae7c3dc858cb50"
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + food1 + "," + food2 + "," +
-            food3 + "," + food4 + "," + food5 + "," +
-            "&app_id=" + app_id + "&app_key=" + app_key + "&";
-
-        $.ajax({
-            METHOD: "GET",
-            url: queryURL
-
-        }).done(function(response) {
-            console.log(response);
-            var results = response.hits;
-            nextCount += 5;
-            for (var j = nextCount; j < nextCount + 5; j++) {
-                var foodDiv = $("<div>");
-                foodDiv.attr("id", "container");
-                var p = $("<p>").text(Math.ceil(results[j].recipe.calories) + " Calories");
-                var foodImage = $("<img/>", { src: results[j].recipe.image, "class": "jpg" }),
-                    anchor = $("<a/>", { href: results[j].recipe.shareAs, "target": "_blank" }),
-                    div = $("<div/>", { "class": "img" });
-                div.append(anchor.append(foodImage)).appendTo($("#foods"));
-                foodDiv.append(p);
-                var ingString = results[j].recipe.ingredientLines;
-
-                for (var i = 0; i < ingString.length; i++) {
-                    var ind = ingString[i].indexOf(" ")
-                    var line = ingString[i].substr(ind)
-                    line.toString();
-                    console.log(line)
-                    var x = line.replace(/\b./g, function(m) { return m.toUpperCase(); });
-                    foodDiv.append(x);
-                }
-
-                foodDiv.append("<br>")
-                foodDiv.append(ingString.length + " Ingredients")
-                $("#foods").append(foodDiv);
-            }
-        });
-    });
 });
 
+// $("#next-imgs").on("click", function() {
+//     var food1 = arrOfFoods[0];
+//     var food2 = arrOfFoods[1];
+//     var food3 = arrOfFoods[2];
+//     var food4 = arrOfFoods[3];
+//     var food5 = arrOfFoods[4];
+
+//     var app_id = "cbaba7cb";
+//     var app_key = "4964ec0ab446a8f304ae7c3dc858cb50"
+//     var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + food1 + "," + food2 + "," +
+//         food3 + "," + food4 + "," + food5 + "," +
+//         "&app_id=" + app_id + "&app_key=" + app_key + "&";
+
+//     $.ajax({
+//         METHOD: "GET",
+//         url: queryURL
+
+//     }).done(function(response) {
+//         console.log(response);
+//         var results = response.hits;
+//         nextCount += 5;
+//         for (var j = nextCount; j < nextCount + 5; j++) {
+//             var foodDiv = $("<div>");
+//             foodDiv.attr("id", "container");
+//             var p = $("<p>").text(Math.ceil(results[j].recipe.calories) + " Calories");
+//             var foodImage = $("<img/>", { src: results[j].recipe.image, "class": "jpg" }),
+//                 anchor = $("<a/>", { href: results[j].recipe.shareAs, "target": "_blank" }),
+//                 div = $("<div/>", { "class": "img" });
+//             div.append(anchor.append(foodImage)).appendTo($("#foods"));
+//             foodDiv.append(p);
+//             var ingString = results[j].recipe.ingredientLines;
+
+//             for (var i = 0; i < ingString.length; i++) {
+//                 var ind = ingString[i].indexOf(" ")
+//                 var line = ingString[i].substr(ind)
+//                 line.toString();
+//                 console.log(line)
+//                 var x = line.replace(/\b./g, function(m) { return m.toUpperCase(); });
+//                 foodDiv.append(x);
+//             }
+
+//             foodDiv.append("<br>")
+//             foodDiv.append(ingString.length + " Ingredients")
+//             $("#foods").append(foodDiv);
+//         }
+//     });
+// });
+
+
 function b() {
-  // $("#loading-wrapper").show();
-    
-    
+    // $("#loading-wrapper").show();
+
+
     var food1 = arrOfFoods[0];
     var food2 = arrOfFoods[1];
     var food3 = arrOfFoods[2];
@@ -276,60 +276,79 @@ function b() {
         console.log(response);
         var results = response.hits;
         nextCount = 0;
+
+        for (var i = 0; i < results.length; i++) {
+            var imgsrc = results[i].recipe.image;
+            var foodImage = $("<img>");
+            foodImage.attr("src", imgsrc);
+            var p = Math.ceil(results[i].recipe.calories) + " Calories";
+            var label = results[i].recipe.label;
+            var box = $("#box" + i);
+            var link = $("<a>");
+            link.attr("href", results[i].recipe.shareAs);
+            link.attr("target", "_blank");
+            link.append(foodImage);
+            box.append(p);
+            box.append(" " + label);
+            box.append(link);
+            $("img").hover(handlerIn, handlerOut);
+
+            function handlerIn() {
+                $(this).css("opacity", 0.1);
+                var infoDiv = $("<p>");
+                infoDiv.text("Would you like to find out more? Click on the image for the full recipe!");
+                // infoDiv.css("position", "relative");
+                // infoDiv.css("top", "20px");
+                infoDiv.css("opacity", 1);
+                box.append(infoDiv);
+
+                // for (var k = 0; k < results[i].recipe.healthLabels.length; k++){
+                //    infoDiv.append(results[i].recipe.healthLabels);
+                // }
+                
+            }
+            function handlerOut() {
+                $(this).css("opacity", 1);
+                // infoDiv.hide();
+            }
+
+
+        }
+
+
+
+
+        // Check if this block works
         for (var j = nextCount; j < nextCount + 5; j++) {
-            if (results[j].recipe == undefined){
-              return
-            }
-            
-            var foodDiv = $("<div>");
-            foodDiv.attr("id", "container");
-            var p = $("<p>").text(Math.ceil(results[j].recipe.calories) + " Calories");
-            var foodImage = $("<img/>", { src: results[j].recipe.image, "class": "jpg" }),
-                anchor = $("<a/>", { href: results[j].recipe.shareAs, "target": "_blank" }),
-                div = $("<div/>", { "class": "img" });
-            div.append(anchor.append(foodImage)).appendTo($("#foods"));
-            foodDiv.append(p);
-            var ingString = results[j].recipe.ingredientLines;
-
-            for (var i = 0; i < ingString.length; i++) {
-                var ind = ingString[i].indexOf(" ")
-                var line = ingString[i].substr(ind)
-                line.toString();
-                console.log(line)
-                var x = line.replace(/\b./g, function(m) { return m.toUpperCase(); });
-                foodDiv.append(x);
+            if (results[j].recipe == undefined) {
+                alert("Sorry, unfortunately we couldn't find a recipe with the ingredients in your picture. Please try another image.");
+                $("#loading-wrapper").hide();
+                $("#main-div").show();
+                return
             }
 
-            foodDiv.append("<br>")
-            foodDiv.append(ingString.length + " Ingredients")
-            $("#foods").append(foodDiv);
-        
-      }
+        }
         $("#loading-wrapper").hide();
-      $(".container-fluid").show();  
-      $("body").css("background-color", "rgb(245, 245, 245)");
-      
+        $(".container-fluid").show();
+        $("body").css("background-color", "rgb(245, 245, 245)");
+
     });
-    
-    
+
+
 };
 
 
-var hiding = $(".panel-body");  
-  
-$(".panel").hover(handlerIn, handlerOut);
- 
 
+// $(".panel").hover(handlerIn, handlerOut);
 
-// hiding.css("background-color", "black");
+// function handlerIn() {
+//     $(this).css("opacity", 0.1);
+// }
 
-function handlerIn (){
-  $(this).css("opacity", 0.1);
-}
+// function handlerOut() {
+//     $(this).css("opacity", 1);
+// }
 
-function handlerOut (){
-  $(this).css("opacity", 1);
-}
 
 /*
   Purpose: Return a back-end model id based on current user selection
@@ -347,9 +366,5 @@ function getSelectedModel() {
 function capitalize(s) {
     return s[0].toUpperCase() + s.slice(1);
 }
-
-
-
-
 
 // If user is not logged in, redirect to login page

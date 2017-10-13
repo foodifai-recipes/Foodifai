@@ -1,4 +1,7 @@
-
+html {
+    margin: 0;
+    padding: 0;
+}
 
 ul {
     list-style: none;
@@ -45,7 +48,7 @@ ul li i {
 }
 
 #loading-text {
-     display: block;
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -157,13 +160,7 @@ ul li i {
     height: 100%;
 }
 
-#header {
-    width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    height: 100px;
-    background-color: #666;
-}
+
 
 #content {
     width: 800px;
@@ -178,7 +175,7 @@ ul li i {
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
-    float:left;
+    float: left;
     font-size: 16px;
     background-color: white;
     padding: 12px 20px;
@@ -189,42 +186,44 @@ ul li i {
 #imgurl:focus {
     width: 55%;
     outline: none;
-    
-
 }
 
 #file-search {
-    background-color:yellow;
+    background-color: yellow;
 }
 
 
 
 #predict-food {
-    position:relative;
-    left:25%;
-    top:25em;
-    background:black;
-    float:left;
-    width:60%;
-    opacity:0.85;
+    position: relative;
+    left: 25%;
+    top: 25em;
+    background: black;
+    float: left;
+    width: 60%;
+    opacity: 0.85;
     animation: fadein 2.3s;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .fileContainer {
     overflow: hidden;
     position: relative;
-    color:white;
+    color: white;
 }
 
 .fileContainer [type=file] {
     cursor: pointer;
     display: inline;
-    float:left;
+    float: left;
     /*font-size: 20px;*/
     filter: alpha(opacity=0);
 
@@ -239,187 +238,191 @@ ul li i {
 
 
 .fileContainer:hover {
-    color: #FFB03B;
+    color: #86BAA1;
 }
 
 
 label {
-    float:left;
+    float: left;
 }
 
 
 body {
-  background-color: rgba(0, 0, 0, .85)
+    background-color: rgba(0, 0, 0, .85)
 }
 
 
 #loading-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index:100;
-  left: 0;
-  top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
 }
 
 #loading-text {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #999;
-  width: 100px;
-  height: 30px;
-  margin: -7px 0 0 -45px;
-  text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 20px;
-  color:white;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #EDEAD0;
+    width: 100px;
+    height: 30px;
+    margin: -7px 0 0 -45px;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 20px;
+    color: white;
 }
 
 #loading-content {
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 170px;
-  height: 170px;
-  margin: -85px 0 0 -85px;
-  border: 3px solid orange;
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 170px;
+    height: 170px;
+    margin: -85px 0 0 -85px;
+    border: 3px solid #A0E8AF;
 }
 
 #loading-content:after {
-  content: "";
-  position: absolute;
-  border: 3px solid black;
-  left: 15px;
-  right: 15px;
-  top: 15px;
-  bottom: 15px;
+    content: "";
+    position: absolute;
+    border: 3px solid #3AB795;
+    left: 15px;
+    right: 15px;
+    top: 15px;
+    bottom: 15px;
 }
 
 #loading-content:before {
-  content: "";
-  position: absolute;
-  border: 3px solid orange;
-  left: 5px;
-  right: 5px;
-  top: 5px;
-  bottom: 5px;
+    content: "";
+    position: absolute;
+    border: 3px solid #A0E8AF;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
 }
 
 #loading-content {
-  border: 3px solid transparent;
-  border-top-color: crimson;
-  border-bottom-color: crimson;
-  border-radius: 50%;
-  -webkit-animation: loader 2s linear infinite;
-  -moz-animation: loader 2s linear infinite;
-  -o-animation: loader 2s linear infinite;
-  animation: loader 2s linear infinite;
+    border: 3px solid transparent;
+    border-top-color: #FFCF56;
+    border-bottom-color: #FFCF56;
+    border-radius: 50%;
+    -webkit-animation: loader 2s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+    -o-animation: loader 2s linear infinite;
+    animation: loader 2s linear infinite;
 }
 
 #loading-content:before {
-  border: 3px solid transparent;
-  border-top-color: orange;
-  border-bottom-color: orange;
-  border-radius: 50%;
-  -webkit-animation: loader 3s linear infinite;
+    border: 3px solid transparent;
+    border-top-color: #A0E8AF;
+    border-bottom-color: #A0E8AF;
+    border-radius: 50%;
+    -webkit-animation: loader 3s linear infinite;
     -moz-animation: loader 2s linear infinite;
-  -o-animation: loader 2s linear infinite;
-  animation: loader 3s linear infinite;
+    -o-animation: loader 2s linear infinite;
+    animation: loader 3s linear infinite;
 }
 
 #loading-content:after {
-  border: 3px solid transparent;
-  border-top-color: black;
-  border-bottom-color: black;
-  border-radius: 50%;
-  -webkit-animation: loader 1.5s linear infinite;
-  animation: loader 1.5s linear infinite;
+    border: 3px solid transparent;
+    border-top-color: #3AB795;
+    border-bottom-color: #3AB795;
+    border-radius: 50%;
+    -webkit-animation: loader 1.5s linear infinite;
+    animation: loader 1.5s linear infinite;
     -moz-animation: loader 2s linear infinite;
-  -o-animation: loader 2s linear infinite;
+    -o-animation: loader 2s linear infinite;
 }
 
 @-webkit-keyframes loaders {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 #content-wrapper {
-  color: #FFF;
-  position: fixed;
-  left: 0;
-  top: 20px;
-  width: 100%;
-  height: 100%;
+    color: #FFF;
+    position: fixed;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 100%;
 }
 
-#header
-{
-  width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  height: 100px;
-  background-color: #666;
+#header {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    height: inherit;
+    background-color: #666;
 }
 
-#content
-{
-  width: 800px;
-  height: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: #888;
+#content {
+    width: 800px;
+    height: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #888;
 }
 
 
 .container-fluid {
-  padding: 0;
-  background-color: rgba(0, 0, 0, .5);
-  min-height: 100vh;
-  overflow:hidden;
+    padding: 0;
+    background: #B0DAB9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #DAD299, #B0DAB9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #DAD299, #B0DAB9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .full-width {
-  width: 100%;
+    width: 100%;
 }
 
 .row {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 a.col-md-3 {
-  padding: 1em;
-  text-decoration: none;
-  color: white;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
 }
-  
-  .half-width {
-  width: 50%;
-  float: left;
+
+.half-width {
+    width: 50%;
+    float: left;
 }
+
 
 
 /** Not sure if I want to include name nav in mobile version
@@ -429,7 +432,11 @@ a.name {
   position:relative;
 }
 **/
+
+
 /** NAV BAR **/
+
+
 /* a.portfolio {
   background-color: rgb(171, 152, 122);
   position:fixed;
@@ -451,76 +458,171 @@ a.contact {
 
 } */
 
+
 /** NAME SECTION **/
+
+
 /* #name {
 
   padding-top: 8em;
 }
  */
-h1 {
+
+
+/*h1 {
   color: white;
-  padding-top: 2em;
-}
+  
+}*/
 
 hr {
-  border: 1px solid black;
-  width: 75%;
+    border: 1px solid black;
+    width: 75%;
 }
 
 #name p {
-  color: white;
-  margin: 1em 4em;
-  text-align: center;
+    color: white;
+    margin: 1em 4em;
+    text-align: center;
 }
 
+
 /*  @media only screen and (min-width: 768px) { */
-  /** BASE STYLES **/
-   
-   .full-width {
+
+
+/** BASE STYLES **/
+
+.full-width {
     width: 100%;
-  }
-   
-  a.col-md-3 {
+}
+
+a.col-md-3 {
     padding: 1em;
     text-decoration: none;
     color: white;
-  }
-  
-   /** NAVBAR **/
-  a.name {
+}
+
+
+/** NAVBAR **/
+
+/*a.name {
     color: black;
     background-color: rgb(245, 245, 245);
-    position:fixed;
-    left:0%;
-    top:0%;
-    z-index:2;
-  }
-   
-  a.portfolio {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 2;
+}
+
+a.portfolio {
     background-color: rgb(171, 152, 122);
     position: fixed;
     left: 25%;
-    top:0%;
-    z-index:2;
-  }
-   
-  a.about {
-    background-color: black;
+    top: 0%;
+    z-index: 2;
+}*/
+
+a.about {
+    background-color: #FFCF56;
+    color:#EDEAD0;
     position: fixed;
-    left:50%;
-    top:0%;
-    z-index:2;
-  }
-   
-  a.contact {
-    background-color: rgb(255, 83, 61);
+    left: 0%;
+    font-size:1.5em;
+    clear:both;
+    padding:1em;
+    top: 0%;
+    z-index: 2;
+}
+
+a.contact {
+    background-color: #3AB795;
+    color:#EDEAD0;
     position: fixed;
-    left:75%;
-    top:0%;
-    z-index:2;
-  }
-  
+    left: 50%;
+    font-size:1.5em;
+    clear:both;
+    padding:1em;
+    top: 0%;
+    z-index: 2;
+}
+
 #middle {
-  position:relative;
-  top:10em;
+    position: relative;
+    top: 10em;
+}
+
+.small-vid {
+    position: relative;
+    width: 800px;
+    height: 300px;
+}
+
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.panel-body {
+    background-color: #EDEAD0;
+    align-self: : center;
+    color:#3AB795;
+}
+
+#login {
+    background: #DAD299;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #B0DAB9, #DAD299);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #B0DAB9, #DAD299);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
 }

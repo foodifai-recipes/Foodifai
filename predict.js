@@ -131,7 +131,7 @@ function doPredict(value) {
             var modelNameShort = modelName.split("-")[0];
             var modelHeader = '<b><span style="font-size:24px; color:#FFCF56">' + capitalize(modelNameShort) + ' Model</span></b>';
             var searchNotify = $('<p style="color:#A0E8AF">Here are some of the ingredients we predicted that are in your photo. The greater the decimal, the greater chance that food is present!');
-            
+
 
 
             // Check for regions models first
@@ -299,10 +299,11 @@ function getRecipe() {
                 p.css("opacity", 0);
                 p.css("color", "#3AB795");
                 p.addClass("text-center");
+                p.css("text-decoration", "none");
 
                 holdPDiv.append(p);
             }
-            box.append(holdPDiv);
+            link.append(holdPDiv);
             holdPDiv.css("position", "relative");
             box.hover(handlerIn, handlerOut);
 

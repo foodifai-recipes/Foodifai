@@ -3,6 +3,9 @@ html {
     padding: 0;
 }
 
+
+
+
 ul {
     list-style: none;
     margin: 30px 0 0 0;
@@ -42,6 +45,7 @@ ul li i {
 #loading-wrapper {
     position: fixed;
     width: 100%;
+    background-color: rgba(0, 0, 0, .85);
     height: 100%;
     left: 0;
     top: 0;
@@ -247,9 +251,6 @@ label {
 }
 
 
-body {
-    background-color: rgba(0, 0, 0, .85)
-}
 
 
 #loading-wrapper {
@@ -365,7 +366,7 @@ body {
         transform: rotate(360deg);
     }
 }
-
+/*
 #content-wrapper {
     color: #FFF;
     position: fixed;
@@ -381,7 +382,7 @@ body {
     text-align: center;
     height: inherit;
     background-color: #666;
-}
+}*/
 
 #content {
     width: 800px;
@@ -617,6 +618,18 @@ a.contact {
     color:#3AB795;
 }
 
+.panel-default>.panel-heading {
+    background: #FFCF56;
+    
+
+}
+
+
+.panel-title  {
+    color:#3AB795;
+    font-weight:bold;
+    font-size:1.2em;
+}
 #login {
     background: #DAD299;
     /* fallback for old browsers */

@@ -9,6 +9,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     margin: 0 auto;
+    height:100%;
 }
 
 #banner {
@@ -49,8 +50,8 @@ body {
 
 
 .header-h {
-    color: #86BAA1;
-    font-size: 72px;
+    color: #3AB795;
+    font-size: 104px;
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
 }
@@ -243,10 +244,15 @@ body {
 }
 
 #event {
-    background: url('../images/steak.jpg') no-repeat;
+    background: url('../images/array-of-foods.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
+    position: relative;
+    height:100%;
 }
+
 
 
 /*.left-images img {
@@ -262,7 +268,7 @@ body {
     background-color: rgb(14, 4, 4);
     /*  border-right: 2px solid #A87F41;*/
     padding: 18px;
-    height: inherit;
+    height: auto;
     overflow: hidden;
 }
 
@@ -272,7 +278,7 @@ body {
     /*padding-bottom: 15px;*/
     font-family: 'Satisfy', sans-serif;
     position: relative;
-    top: -40px;
+    top: -52px;
 }
 
 .details-text p {
@@ -502,7 +508,9 @@ height:290px;
     overflow: initial;
 }
 
-
+.carousel-indicators {
+    margin-left:20px;
+}
 
 .carousel-inner>.item>img {
     height: 300px;
@@ -512,7 +520,7 @@ height:290px;
 }
 
 .content-holder {
-    margin-top: -20px;
+    margin-top: -24px;
 }
 
 .content-holder>p,

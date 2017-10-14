@@ -283,7 +283,7 @@ function b() {
             foodImage.attr("src", imgsrc);
             foodImage.addClass("img-responsive img-rounded col-xs-12");
             // foodImage.addClass("")      
-            var cals = Math.ceil(results[i].recipe.calories) + " Calories";
+            var cals = Math.ceil(results[i].recipe.calories) + " Calories </br>";
             var dishName = results[i].recipe.label;
 
             // var healthLabel = results[i].recipe.healthLabels[i];

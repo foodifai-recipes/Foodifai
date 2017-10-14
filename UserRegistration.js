@@ -87,11 +87,9 @@ $(document).ready(function() {
         }
     }
 
-
-
-
-      // Initialize Firebase
+  // Initialize Firebase
   var config = {
+    
     apiKey: "AIzaSyAbfvhPdoGdA3bLqlfFG7wZuW--amoyefI",
     authDomain: "foodifai-rutgers.firebaseapp.com",
     databaseURL: "https://foodifai-rutgers.firebaseio.com",
@@ -120,8 +118,6 @@ $(document).ready(function() {
                 callModalPassword(); //alert('The password is too weak.');
             }
         });
-        $("#login").hide();
-        $("#event").show();
     });
 
     // Sign-in an existing user with Firebase Authentication
@@ -143,14 +139,26 @@ $(document).ready(function() {
             };
         });
 
-
         // Add what happens after a new user is created.
         var activeName = name;
         var activeEmail = email;
-        $("#login").hide();
-        // regDone = true;
-        $("#event").show();
-    });
+
+           
+        firebase.auth().onAuthStateChanged(function(user) { //double check if the user is signed 
+               
+                if (user) {
+                    console.log (user.uid);
+                    console.log("Firebase onAuthStateChanged")
+                    $("#login").hide();
+                    $("#event").show();
+                }
+                else {
+                        console.log("Getting Firebase currentUser: No user signed-in.");
+                      }  
+        });
+    });    
+
+    
 
     $("#clear-user").on("click", function() {
         name = "";
@@ -161,5 +169,3 @@ $(document).ready(function() {
 
 
 });
-
-

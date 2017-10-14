@@ -1,11 +1,105 @@
 html {
     margin: 0;
     padding: 0;
+    height:100%;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.panel-body {
+    background-color: #EDEAD0;
+    align-self: : center;
+    color:#3AB795;
+}
+
+.panel-default>.panel-heading {
+    background: #FFCF56;
+    
+
+}
+
+
+.panel-title  {
+    color:#3AB795;
+    font-weight:bold;
+    font-size:1.2em;
+    padding:0.5em;
+    background: #FFCF56;
+}
+
+
+#login {
+    background: #DAD299;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #B0DAB9, #DAD299);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #B0DAB9, #DAD299);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
 }
 
 
 
 
+/*The first-page.css is where the user can read about Foodifai*/
+
+
+
+
+
+
+/*Styles for the Clarifai JSON we're putting on the page*/
 ul {
     list-style: none;
     margin: 30px 0 0 0;
@@ -27,7 +121,7 @@ li {
     color: #EDEAD0;
 }
 
-ul li i {
+ li i {
     font-family: "Lucida Console", Courier, monospace;
     font-style: normal;
     font-size: 14px;
@@ -36,12 +130,13 @@ ul li i {
 .conceptBox {
     float: left;
     margin-left: 40px;
-    margin-top: 15px;
-
+    margin-top:-3em;
     height: 100%;
 }
 
 
+
+/*The loading styles, the loading animation was broken into a before and after transition because of the nature of the spin*/
 #loading-wrapper {
     position: fixed;
     width: 100%;
@@ -559,86 +654,7 @@ a.contact {
 
 
 
-/* The Modal (background) */
 
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-
-/* Modal Content/Box */
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Could be more or less, depending on screen size */
-}
-
-
-/* The Close Button */
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.panel-body {
-    background-color: #EDEAD0;
-    align-self: : center;
-    color:#3AB795;
-}
-
-.panel-default>.panel-heading {
-    background: #FFCF56;
-    
-
-}
-
-
-.panel-title  {
-    color:#3AB795;
-    font-weight:bold;
-    font-size:1.2em;
-}
-#login {
-    background: #DAD299;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #B0DAB9, #DAD299);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #B0DAB9, #DAD299);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    min-height: 100vh;
-}
 
 
 #preview-div {
@@ -647,6 +663,8 @@ a.contact {
     clear:left;
     float:right; 
 }
+
+
 /*.show-p {
     margin-top: -4em;
 }*/

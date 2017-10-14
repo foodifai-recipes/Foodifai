@@ -131,6 +131,7 @@ function doPredict(value) {
             var modelNameShort = modelName.split("-")[0];
             var modelHeader = '<b><span style="font-size:24px; color:#FFCF56">' + capitalize(modelNameShort) + ' Model</span></b>';
             var searchNotify = $('<p style="color:#A0E8AF">Here are some of the ingredients we predicted that are in your photo. The greater the decimal, the greater chance that food is present!');
+            
 
 
             // Check for regions models first
@@ -170,23 +171,19 @@ function doPredict(value) {
 
             $('#concepts').html(conceptNames);
             var timerDone = false;
-
+            // timer so the results are shown only after the user gets to see the predictions about the image
             function results() {
                 $("#loading-wrapper").hide();
                 timerDone = true;
-                $(".container-fluid").show();
-                
-                
+                $(".container-fluid").show();       
             }
             setTimeout(results, 7000);
-            b();
+            getRecipe();
         },
         function(err) {
             console.log(err);
         }
-
     );
-
 }
 
 var nextCount = 0;
@@ -203,6 +200,8 @@ $(document).ready(function() {
         $("#main-div").show();
     });
 });
+
+// ***** Code for when we add a next button for our images
 
 // $("#next-imgs").on("click", function() {
 //     var food1 = arrOfFoods[0];
@@ -253,10 +252,7 @@ $(document).ready(function() {
 // });
 
 
-function b() {
-    // $("#loading-wrapper").show();
-
-
+function getRecipe() {
     var food1 = arrOfFoods[0];
     var food2 = arrOfFoods[1];
     var food3 = arrOfFoods[2];
@@ -298,53 +294,28 @@ function b() {
 
             for (var j = 0; j < results[i].recipe.healthLabels.length; j++) {
                 var p = $("<p>");
-
-                // Put this into one div instead and then append the div at the end.
                 p.text(results[i].recipe.healthLabels[j]);
                 p.attr("class", "show-p");
                 p.css("opacity", 0);
                 p.css("color", "#3AB795");
-                // p.css("margin-top", "-4em");
-                // p.css("float", "left");
-                // 
-
-                //
-                // p.css("left", "2em");
-                // p.css("padding-top", "2em");
                 p.addClass("text-center");
 
                 holdPDiv.append(p);
             }
             box.append(holdPDiv);
             holdPDiv.css("position", "relative");
-            // holdPDiv.css("top", "-7em");
-            // holdPDiv.css("margin-top", "-5em");
-
-
-            // $(".health-labels").css("margin-top", "-20px")
             box.hover(handlerIn, handlerOut);
 
             function handlerIn() {
                 $(this).find("img").fadeTo(500, 0.1);
                 $(this).find(".show-p").fadeTo(500, 1);
-
-
             }
-
             function handlerOut() {
                 $(this).find("img").fadeTo(500, 1);
                 $(this).find(".show-p").fadeTo(500, 0);
-
             }
-
-
         }
-
-
-
     });
-
-
 };
 
 $(".about").on("click", function() {
@@ -357,6 +328,8 @@ $(".upload").on("click", function() {
     $(".container-fluid").hide();
     $("#main-div").show();
 });
+
+
 /*
   Purpose: Return a back-end model id based on current user selection
   Returns:
@@ -373,5 +346,3 @@ function getSelectedModel() {
 function capitalize(s) {
     return s[0].toUpperCase() + s.slice(1);
 }
-
-// If user is not logged in, redirect to login page

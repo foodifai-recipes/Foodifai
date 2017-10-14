@@ -17,14 +17,14 @@ ul {
 }
 
 li {
-    box-shadow: 0 0 0 2px #546578 inset;
+    box-shadow: 0 0 0 2px #86BAA1 inset;
     margin: 0 0 5px 0;
-    border-radius: 16px;
+    border-radius: 6px;
     line-height: 28px;
     padding: 2px 15px;
-    font-weight: 500;
-    font-size: 15px;
-    color: #2E4157;
+    font-weight: 900;
+    font-size: 24px;
+    color: #EDEAD0;
 }
 
 ul li i {
@@ -37,7 +37,7 @@ ul li i {
     float: left;
     margin-left: 40px;
     margin-top: 15px;
-    margin-bottom: 30px;
+
     height: 100%;
 }
 
@@ -264,7 +264,7 @@ label {
 
 #loading-text {
     display: block;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     color: #EDEAD0;
@@ -640,6 +640,13 @@ a.contact {
     min-height: 100vh;
 }
 
+
+#preview-div {
+    margin-top:30px; 
+    margin-right:2em; 
+    clear:left;
+    float:right; 
+}
 /*.show-p {
     margin-top: -4em;
 }*/

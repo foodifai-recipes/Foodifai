@@ -111,10 +111,6 @@ function doPredict(value) {
             var allItems = response.rawData.outputs[0].data.concepts;
             for (var i = 0; i < allItems.length; i++) {
                 counter += 1;
-                // if (response.rawData.outputs[0].data.concepts[i].name == JSON.parse("aliment")){
-                //   console.log("got it");
-                //   return;
-                // }
                 arrOfFoods.push(response.rawData.outputs[0].data.concepts[i].name);
 
 
@@ -133,7 +129,9 @@ function doPredict(value) {
             var tagCount = 0;
             var modelName = response.rawData.outputs[0].model.name;
             var modelNameShort = modelName.split("-")[0];
-            var modelHeader = '<b><span style="font-size:14px">' + capitalize(modelNameShort) + ' Model</span></b>';
+            var modelHeader = '<b><span style="font-size:24px; color:#FFCF56">' + capitalize(modelNameShort) + ' Model</span></b>';
+            var searchNotify = $('<p style="color:#A0E8AF">Here are some of the ingredients we predicted that are in your photo. The greater the decimal, the greater chance that food is present!');
+
 
             // Check for regions models first
             if (response.rawData.outputs[0].data.hasOwnProperty("regions")) {
@@ -171,15 +169,17 @@ function doPredict(value) {
             conceptNames = modelHeader + conceptNames;
 
             $('#concepts').html(conceptNames);
+            var timerDone = false;
 
+            function results() {
+                $("#loading-wrapper").hide();
+                timerDone = true;
+                $(".container-fluid").show();
+                
+                
+            }
+            setTimeout(results, 7000);
             b();
-
-
-
-
-            // document.getElementById("add-image-button").style.visibility = "visible";
-            // console.log(arrOfFoods);
-
         },
         function(err) {
             console.log(err);
@@ -192,8 +192,6 @@ function doPredict(value) {
 var nextCount = 0;
 
 $(document).ready(function() {
-    // $("#event").hide();
-    // $("#main-div").hide();
     $("#event").hide();
     $("#banner").hide();
     $("#loading-wrapper").hide();
@@ -325,42 +323,40 @@ function b() {
 
             // $(".health-labels").css("margin-top", "-20px")
             box.hover(handlerIn, handlerOut);
-            
+
             function handlerIn() {
-                $(this).find("img").fadeTo( 500 , 0.1);
-                $(this).find(".show-p").fadeTo( 500 , 1);
-               
+                $(this).find("img").fadeTo(500, 0.1);
+                $(this).find(".show-p").fadeTo(500, 1);
+
 
             }
 
             function handlerOut() {
-                $(this).find("img").fadeTo( 500 , 1);
-                $(this).find(".show-p").fadeTo( 500 , 0);
-                // infoDiv.hide();
+                $(this).find("img").fadeTo(500, 1);
+                $(this).find(".show-p").fadeTo(500, 0);
+
             }
 
 
         }
 
-        // Check if this block works
-        for (var j = nextCount; j < nextCount + 5; j++) {
-            if (results[j].recipe == undefined) {
-                alert("Sorry, unfortunately we couldn't find a recipe with the ingredients in your picture. Please try another image.");
-                $("#loading-wrapper").hide();
-                $("#main-div").show();
-                return
-            }
 
-        }
-        $("#loading-wrapper").hide();
-        $(".container-fluid").show();
-        $("body").css("background-color", "rgb(245, 245, 245)");
 
     });
 
 
 };
 
+$(".about").on("click", function() {
+    location.reload();
+    $(".container-fluid").hide();
+    $("#event").show();
+});
+
+$(".upload").on("click", function() {
+    $(".container-fluid").hide();
+    $("#main-div").show();
+});
 /*
   Purpose: Return a back-end model id based on current user selection
   Returns:

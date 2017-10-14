@@ -6,6 +6,7 @@
     <title>Foodifai</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
     <!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
+    <link rel="shortcut icon" href="animated_favicon.gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/first-page.css" type="text/css">
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
@@ -152,24 +153,26 @@
                 <input type="file" id="filename" placeholder="Filename" />
             </label>
         </div>
+        <!-- <button id="next-imgs">next images</button> -->
+    </section>
+    <section id="loading-wrapper">
+      <!-- <div class="row"> -->
+        <div id="loading-text">LOADING</div>
+        <div id="loading-content"></div>
         <div id="predictions">
-            <div style="margin-top:30px; margin-left:20px; margin-bottom:30px; clear:left; float:left">
-                <img id="img_preview1" src="" width="400" />
+            <div id="preview-div">
+                <img id="img_preview1" src="" width="400" class="img-responsive img-rounded"/>
                 <br/>
             </div>
             <div id="concepts" class="conceptBox">
             </div>
         </div>
-        <!-- <button id="next-imgs">next images</button> -->
+      <!-- </div> -->
     </section>
-    <div id="loading-wrapper">
-        <div id="loading-text">LOADING</div>
-        <div id="loading-content"></div>
-    </div>
     <div class="container-fluid">
         <div class="row">
-            <a href="#about" class="col-md-6 text-center about" id="about-desktop">About</a>
-            <a href="#contact" class="col-md-6 text-center contact" id="contact-desktop">Return to upload screen</a>
+            <a href="#about" class="col-md-6 text-center about">About</a>
+            <a href="#main-div" class="col-md-6 text-center upload contact">Return to upload screen</a>
         </div>
         <div id="name">
             <h1 class="text-center">Bon Appétit</h1>
@@ -226,36 +229,6 @@
             </div>
         </div>
     </div>
-    <!-- footer -->
-    <!-- <footer class="footer text-center">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-md-offset-3 col-md-6 text-center">
-                        <div class="widget">
-                            <h4 class="widget-title">Delicious</h4>
-                            <address>324 Ellte Road
-                                <br>Delhi, DL 110013</address>
-                            <div class="social-list">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </div>
-                            <p class="copyright clear-float">
-                                © Delicious Theme. All Rights Reserved
-                                <div class="credits">
-                                    
-                                    All the links in the footer should remain intact. 
-                                    You can delete the links only if you purchased the pro version.
-                                    Licensing information: https://bootstrapmade.com/license/
-                                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Delicious
-                               
-                                    Designed by <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            < /div>
-         </footer> -->
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="UserRegistration.js"></script>

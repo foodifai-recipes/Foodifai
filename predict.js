@@ -281,42 +281,66 @@ function b() {
             var imgsrc = results[i].recipe.image;
             var foodImage = $("<img>");
             foodImage.attr("src", imgsrc);
-            var p = Math.ceil(results[i].recipe.calories) + " Calories";
-            var label = results[i].recipe.label;
+            foodImage.addClass("img-responsive img-rounded col-xs-12");
+            // foodImage.addClass("")      
+            var cals = Math.ceil(results[i].recipe.calories) + " Calories";
+            var dishName = results[i].recipe.label;
+
+            // var healthLabel = results[i].recipe.healthLabels[i];
             var box = $("#box" + i);
             var link = $("<a>");
             link.attr("href", results[i].recipe.shareAs);
             link.attr("target", "_blank");
             link.append(foodImage);
-            box.append(p);
-            box.append(" " + label);
+            box.append(cals);
+            box.append(" " + dishName);
             box.append(link);
-            $("img").hover(handlerIn, handlerOut);
+            // box.css("margin-top", "-2em");
+            var holdPDiv = $(".health-labels" + i);
 
-            function handlerIn() {
-                $(this).css("opacity", 0.1);
-                var infoDiv = $("<p>");
-                infoDiv.text("Would you like to find out more? Click on the image for the full recipe!");
-                // infoDiv.css("position", "relative");
-                // infoDiv.css("top", "20px");
-                infoDiv.css("opacity", 1);
-                box.append(infoDiv);
+            for (var j = 0; j < results[i].recipe.healthLabels.length; j++) {
+                var p = $("<p>");
 
-                // for (var k = 0; k < results[i].recipe.healthLabels.length; k++){
-                //    infoDiv.append(results[i].recipe.healthLabels);
-                // }
-                
+                // Put this into one div instead and then append the div at the end.
+                p.text(results[i].recipe.healthLabels[j]);
+                p.attr("class", "show-p");
+                p.css("opacity", 0);
+                p.css("color", "#3AB795");
+                // p.css("margin-top", "-4em");
+                // p.css("float", "left");
+                // 
+
+                //
+                // p.css("left", "2em");
+                // p.css("padding-top", "2em");
+                p.addClass("text-center");
+
+                holdPDiv.append(p);
             }
+            box.append(holdPDiv);
+            holdPDiv.css("position", "relative");
+            // holdPDiv.css("top", "-7em");
+            // holdPDiv.css("margin-top", "-5em");
+
+
+            // $(".health-labels").css("margin-top", "-20px")
+            box.hover(handlerIn, handlerOut);
+            
+            function handlerIn() {
+                $(this).find("img").fadeTo( 500 , 0.1);
+                $(this).find(".show-p").fadeTo( 500 , 1);
+               
+
+            }
+
             function handlerOut() {
-                $(this).css("opacity", 1);
+                $(this).find("img").fadeTo( 500 , 1);
+                $(this).find(".show-p").fadeTo( 500 , 0);
                 // infoDiv.hide();
             }
 
 
         }
-
-
-
 
         // Check if this block works
         for (var j = nextCount; j < nextCount + 5; j++) {
@@ -336,19 +360,6 @@ function b() {
 
 
 };
-
-
-
-// $(".panel").hover(handlerIn, handlerOut);
-
-// function handlerIn() {
-//     $(this).css("opacity", 0.1);
-// }
-
-// function handlerOut() {
-//     $(this).css("opacity", 1);
-// }
-
 
 /*
   Purpose: Return a back-end model id based on current user selection

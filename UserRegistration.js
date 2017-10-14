@@ -11,7 +11,6 @@ $(document).ready(function() {
 
         $("#email-registered").on("click", function() {
             modal.style.display = "none";
-            // $(location).attr('href','http://abcd.com'+temp);
         })
 
         window.onclick = function(event) {

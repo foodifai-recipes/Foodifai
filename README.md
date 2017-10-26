@@ -1,4 +1,4 @@
-# If you're interested in using this repo for the Clarifai API, look for the javascript-starter repo and go to http://developer.clarifai.com to register and get your API key.
+## If you're interested in using this repo for the Clarifai API, look for the javascript-starter repo and go to [Clarifai's developer Page](http://developer.clarifai.com) to register and get your API key.
 
 Now that the Clarifai details are out of the way, let's tell you a little bit more about this project.
 
@@ -17,12 +17,11 @@ When we first started the Foodifai app, we were primarily concerned with getting
 
 ##Challenges we ran into
 One of our initial problems was ideation, both before the project and during the process. We had a hard time trying to think of an app that met the following criteria:
-	Original idea
-	Solves a problem
-	Awesome
-	Within our capabilities
+-Original idea
+-Solves a problem
+-Awesome
+-Within our capabilities
 We had such huge dreams for our project but only had a limited time and knowledge to work with. Once we were able to come up with a reasonable idea that could be completed within the less than two weeks, we ran into problems deciding and properly using APIs. Some were deprecated, while others had poor documentation. Others required special access keys; we made due with the APIs that we knew we could get JSON back from. Once the kinks from the APIs were sorted out, we began working on the front end and authentication portion. Both proved to be difficult, tedious processes but we're confident there's still much to be improved.
-
 
 
 ##Accomplishments that we're proud of

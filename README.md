@@ -1,4 +1,4 @@
-## If you're interested in using this repo for the Clarifai API, look for the javascript-starter repo and go to [Clarifai's developer Page](http://developer.clarifai.com) to register and get your API key.
+## If you're interested in using this repo for the Clarifai API, use this [javascript-starter repo](https://github.com/Clarifai/javascript-starter) and go to [Clarifai's developer page](http://developer.clarifai.com) to register and get your API key.
 
 Now that the Clarifai details are out of the way, let's tell you a little bit more about this project.
 

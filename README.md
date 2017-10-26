@@ -48,7 +48,8 @@ You probably noticed that there's a lot of room for improvement with Foodifai. W
 
 
 ## Authors
-Mohammed Wardeh
-Akhila Naik
-Dariell Vasquez
+
+- Mohammed Wardeh
+- Akhila Naik
+- Dariell Vasquez
 

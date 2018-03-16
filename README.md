@@ -6,7 +6,7 @@
 
 ## [Link to App](https://foodifai-recipes.github.io/Foodifai/)
 
-![Foodifai]()
+![Foodifai](https://media.giphy.com/media/DBGTtOvMJFehRA81iA/giphy.gif)
 
 ## Inspiration
 In an age where everyone is concerned with streamlining day to day processes, we tried to come up with a way to expedite the way we decide what and how we eat. With the arrival of Snap Chat, Instagram and other live photo updates apps, people have be more and more accustomed to taking a picture and uploading it, while traditional typing struggles to keep up. We developed a way to help users get from "What am I going to make for food right now?" to "Let me upload these ingredients and see what new recipe I could make today." It's simple, it's intuitive, it's Foodifai.
@@ -43,17 +43,7 @@ We learned the benefit of psuedocoding and brainstorming before jumping down a r
 ## What's next for Foodifai
 You probably noticed that there's a lot of room for improvement with Foodifai. We'd like to set up a back-end server to host all our information securely. We'd also like to use a database to store information based on a user's preferences. When the user returns, they could be reminded of their past recipe searches and bypass the picture process. The user could also be notified about the other recipes users are looking up to bypass the picture process. And finally, we think it's only natural that Foodifai becomes a fully functional iOS or android app. The ease of being able to upload directly from your phone is something we definitely want to incorporate.
 
-
-<<<<<<< HEAD
 ## Built With
-
-* Login: Firebase, HTML, Bootstrap, Javascript, jQuery
-* Homepage: Javascript, jQuery, HTML, Bootstrap
-* Upload: HTML, Bootstrap, Javascript, jQuery, Clarifai API
-* Recipe: HTML, Bootstrap, Javascript, jQuery, Edamam API
-
-=======
-##Built With
 -Login: Firebase, HTML, Bootstrap, Javascript, jQuery
 -Homepage: Javascript, jQuery, HTML, Bootstrap
 -Upload: HTML, Bootstrap, Javascript, jQuery, Clarifai API

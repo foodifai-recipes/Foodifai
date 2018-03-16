@@ -6,7 +6,7 @@
 
 ## [Link to App](https://foodifai-recipes.github.io/Foodifai/)
 
-![Foodifai](https://media.giphy.com/media/DBGTtOvMJFehRA81iA/giphy.gif)
+![Foodifai](https://media.giphy.com/media/dgaZ373Cpcct2QlXZd/giphy.gif)
 
 ## Inspiration
 In an age where everyone is concerned with streamlining day to day processes, we tried to come up with a way to expedite the way we decide what and how we eat. With the arrival of Snap Chat, Instagram and other live photo updates apps, people have be more and more accustomed to taking a picture and uploading it, while traditional typing struggles to keep up. We developed a way to help users get from "What am I going to make for food right now?" to "Let me upload these ingredients and see what new recipe I could make today." It's simple, it's intuitive, it's Foodifai.

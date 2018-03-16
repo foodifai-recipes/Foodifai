@@ -140,6 +140,10 @@ li {
 
 
 /*The loading styles, the loading animation was broken into a before and after transition because of the nature of the spin*/
+#concepts {
+    margin-top:24px;
+}
+
 #loading-wrapper {
     position: fixed;
     width: 100%;
@@ -170,7 +174,7 @@ li {
     top: 50%;
     width: 170px;
     height: 170px;
-    margin: -85px 0 0 -85px;
+    margin: -85px 0 24px -85px;
     border: 3px solid #F00;
 }
 
@@ -382,7 +386,7 @@ label {
     top: 50%;
     width: 170px;
     height: 170px;
-    margin: -85px 0 0 -85px;
+    margin: -85px 0 24px -85px;
     border: 3px solid #A0E8AF;
 }
 

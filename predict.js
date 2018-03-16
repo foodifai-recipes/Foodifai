@@ -127,6 +127,8 @@ function doPredict(value) {
             var conceptNames = "";
             var tagArray, regionArray;
             var tagCount = 0;
+            var modelName = response.rawData.outputs[0].model.name;
+            var modelNameShort = modelName.split("-")[0];
             var modelHeader = '<b><span style="font-size:24px; color:#FFCF56">Here are some of the ingredients we predicted that are in your photo.</span></b>';
 
 

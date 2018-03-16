@@ -2,7 +2,7 @@
 
 ## If you're interested in using this repo for the Clarifai API, use this [javascript-starter repo](https://github.com/Clarifai/javascript-starter) and go to [Clarifai's developer page](http://developer.clarifai.com) to register and get your API key.
 
-Now that the Clarifai details are out of the way, let's tell you a little bit more about this project.
+
 
 ## [Link to App](https://foodifai-recipes.github.io/Foodifai/)
 
@@ -44,6 +44,7 @@ We learned the benefit of psuedocoding and brainstorming before jumping down a r
 You probably noticed that there's a lot of room for improvement with Foodifai. We'd like to set up a back-end server to host all our information securely. We'd also like to use a database to store information based on a user's preferences. When the user returns, they could be reminded of their past recipe searches and bypass the picture process. The user could also be notified about the other recipes users are looking up to bypass the picture process. And finally, we think it's only natural that Foodifai becomes a fully functional iOS or android app. The ease of being able to upload directly from your phone is something we definitely want to incorporate.
 
 
+<<<<<<< HEAD
 ## Built With
 
 * Login: Firebase, HTML, Bootstrap, Javascript, jQuery
@@ -51,6 +52,13 @@ You probably noticed that there's a lot of room for improvement with Foodifai. W
 * Upload: HTML, Bootstrap, Javascript, jQuery, Clarifai API
 * Recipe: HTML, Bootstrap, Javascript, jQuery, Edamam API
 
+=======
+##Built With
+-Login: Firebase, HTML, Bootstrap, Javascript, jQuery
+-Homepage: Javascript, jQuery, HTML, Bootstrap
+-Upload: HTML, Bootstrap, Javascript, jQuery, Clarifai API
+-Recipe: HTML, Bootstrap, Javascript, jQuery, Edamam API
+>>>>>>> Updated html on model page
 
 
 ## Authors

@@ -129,8 +129,7 @@ function doPredict(value) {
             var tagCount = 0;
             var modelName = response.rawData.outputs[0].model.name;
             var modelNameShort = modelName.split("-")[0];
-            var modelHeader = '<b><span style="font-size:24px; color:#FFCF56">' + capitalize(modelNameShort) + ' Model</span></b>';
-            var searchNotify = $('<p style="color:#A0E8AF">Here are some of the ingredients we predicted that are in your photo. The greater the decimal, the greater chance that food is present!');
+            var modelHeader = '<p style="color:#A0E8AF">Here are some of the ingredients we predicted that are in your photo. The greater the decimal, the greater chance that food is present!';
 
 
 

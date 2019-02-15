@@ -48,7 +48,6 @@ You probably noticed that there's a lot of room for improvement with Foodifai. W
 -Homepage: Javascript, jQuery, HTML, Bootstrap
 -Upload: HTML, Bootstrap, Javascript, jQuery, Clarifai API
 -Recipe: HTML, Bootstrap, Javascript, jQuery, Edamam API
->>>>>>> Updated html on model page
 
 
 ## Authors
